@@ -3209,19 +3209,18 @@ dialog#data-modal::backdrop {
   }
 
   .header-inner {
-    padding: 7px 0;
-    gap: 8px;
+    padding: 8px 16px;
+    gap: 16px;
     width: 100%;
     max-width: 100%;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
   }
 
   .brand-wrapper {
     gap: 8px;
     min-width: 0;
-    flex-shrink: 1;
-    overflow: hidden;
+    flex-shrink: 0;
   }
 
   .brand-emblem {
@@ -3232,21 +3231,18 @@ dialog#data-modal::backdrop {
 
   .brand-titles {
     min-width: 0;
-    overflow: hidden;
   }
 
   .brand-logo-text {
     font-size: 1.18rem;
-    line-height: 1.1;
+    line-height: 1.05;
   }
 
   .brand-subtext {
-    font-size: 0.58rem;
+    font-size: 0.55rem;
     letter-spacing: 0.04em;
     white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    max-width: 110px;
+    max-width: none;
   }
 
   .header-nav {
@@ -3254,7 +3250,7 @@ dialog#data-modal::backdrop {
   }
 
   .header-actions {
-    gap: 6px;
+    gap: 8px;
     flex-shrink: 0;
   }
 
