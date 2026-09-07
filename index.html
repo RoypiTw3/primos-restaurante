@@ -1,0 +1,864 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Primos Restaurante · San Antonio, Cali (1982) · Sitio Oficial & Menú Digital</title>
+  <meta name="description" content="Sitio web oficial de Primos Restaurante en San Antonio, Cali. Especialistas en Baby Beef, cortes a la parrilla, reservas de mesa, pedidos para llevar y gastronomía clásica desde 1982.">
+  <link rel="icon" type="image/png" href="https://images.cluvi.com/hXMDK7OSRS/w_576_hXMDK7OSRS_montaje-52.png">
+
+  <!-- Tipografía Auténtica Primos: Jost (Arquitectónica / Display) + Caveat (Manuscrita / Autor) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Jost:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,600&family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ==========================================================================
+       BARRA OFICIAL DE SEGURIDAD & CONCIERGE DIRECTO
+       ========================================================================== -->
+  <aside class="official-bar" aria-label="Información de sede y reservas">
+    <div class="container official-bar-inner">
+      <div class="official-status">
+        <span id="topbar-verified-text" data-i18n="topbar_verified">San Antonio · Carrera 5 # 2-123, Cali · Desde 1982</span>
+      </div>
+      <div class="official-actions">
+        <!-- Selector Multilingüe (Español, English, Português - Tipográfico sin banderas) -->
+        <div class="lang-selector-group" role="group" aria-label="Seleccionar idioma">
+          <button type="button" class="lang-pill-btn active" data-lang="es" aria-label="Español" title="Español">ES</button>
+          <button type="button" class="lang-pill-btn" data-lang="en" aria-label="English" title="English">EN</button>
+          <button type="button" class="lang-pill-btn" data-lang="pt" aria-label="Português" title="Português">PT</button>
+        </div>
+
+        <span class="official-separator" aria-hidden="true">|</span>
+
+        <span class="official-label" id="topbar-line-label" data-i18n="topbar_line">Reservas:</span>
+        <a href="https://wa.me/573153771321?text=Hola%20Primos%20Restaurante%2C%20quisiera%20hacer%20una%20reserva%20o%20consultar%20el%20men%C3%BA." target="_blank" rel="noopener" class="official-link" title="Contactar por WhatsApp Oficial">
+          <svg class="svg-icon-wa" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.42a8.225 8.225 0 0 1 2.41 5.83c0 4.54-3.7 8.24-8.24 8.24-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.196 8.196 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24m4.52 10.23c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.05-.39-2-1.23-.74-.66-1.24-1.47-1.38-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.13-.15.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.56-1.35-.77-1.85-.2-.49-.41-.42-.56-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.87.85-.87 2.07s.89 2.4 1.02 2.57c.13.17 1.76 2.68 4.26 3.76.59.26 1.06.41 1.42.53.6.19 1.14.16 1.57.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.08.15-1.18-.07-.1-.23-.17-.48-.29z"/>
+          </svg>
+          <span>315 377 1321</span>
+        </a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ==========================================================================
+       ENCABEZADO PRINCIPAL & NAVEGACIÓN
+       ========================================================================== -->
+  <header class="main-header" role="banner">
+    <div class="container header-inner">
+      <a href="#portal" class="brand-wrapper" aria-label="Ir al inicio de Primos Restaurante">
+        <div class="brand-emblem">
+          <img src="https://images.cluvi.com/hXMDK7OSRS/w_576_hXMDK7OSRS_montaje-52.png" alt="Emblema de Gato Primos" width="42" height="42">
+        </div>
+        <div class="brand-titles">
+          <span class="brand-logo-text">Primos</span>
+          <span class="brand-subtext">San Antonio · Cali 1982</span>
+        </div>
+      </a>
+
+      <!-- Menú de Navegación del Sitio Completo -->
+      <nav class="header-nav" aria-label="Navegación principal">
+        <a href="#portal" class="nav-link" data-i18n="nav_inicio">Inicio</a>
+        <a href="#portal-servicios" class="nav-link" data-i18n="nav_servicios">Servicios</a>
+        <a href="#seccion-menu" class="nav-link" data-i18n="nav_carta">Carta</a>
+        <a href="#cat-block-baby-beef" id="nav-baby-beef-btn" class="nav-link" data-i18n="nav_baby_beef">Baby Beef</a>
+        <a href="#seccion-reservas" class="nav-link" data-i18n="nav_reservas">Reservas</a>
+        <a href="#seccion-takeaway" class="nav-link" data-i18n="nav_takeaway">Pide & Recoge</a>
+        <a href="#seccion-historia" class="nav-link" data-i18n="nav_historia">Historia & Arte</a>
+      </nav>
+
+      <div class="header-actions">
+        <!-- Selector de Mesa -->
+        <div class="table-pill" title="Número de mesa en el restaurante">
+          <span data-i18n="table_label">Mesa:</span>
+          <input type="number" id="table-number-input" class="table-input" value="1" min="1" max="99" aria-label="Número de mesa">
+        </div>
+
+        <!-- Modo Nocturno / Taberna -->
+        <button id="theme-toggle" class="theme-toggle-btn" aria-label="Alternar tema oscuro o claro" title="Cambiar tema de visualización">
+          <svg id="theme-icon-moon" class="svg-icon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+          <svg id="theme-icon-sun" class="svg-icon" style="display:none;" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+        </button>
+
+        <!-- Botón de Orden / Carrito -->
+        <button id="cart-drawer-trigger" class="cart-pill-btn" aria-label="Ver orden actual">
+          <svg class="svg-icon" viewBox="0 0 24 24"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+          <span data-i18n="cart_btn">Mi Orden</span>
+          <span id="cart-count" class="cart-count-badge">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       HERO PRINCIPAL DE BIENVENIDA (PORTAL SAN ANTONIO)
+       ========================================================================== -->
+  <section id="portal" class="hero-section">
+    <div class="container">
+      <div class="hero-card">
+        <img src="https://images.cluvi.com/iN506Nv4Xu/w_1200_iN506Nv4Xu_banner-del-home.png" alt="Patio colonial de Primos Restaurante en San Antonio Cali" class="hero-backdrop-img">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+          <div class="hero-badge-tag">
+            <span data-i18n="hero_tag">Tradición Gastronómica · San Antonio · Cali 1982</span>
+          </div>
+          <h1 class="hero-title" data-i18n="hero_title">Cortes de autor y clásicos en el corazón de San Antonio</h1>
+          <p class="hero-description" data-i18n="hero_desc">
+            Más de cuatro décadas rindiendo homenaje a la buena parrilla, nuestro legendario Baby Beef con 7 salsas artesanales y la atmósfera artística y colonial de Cali.
+          </p>
+          <div class="hero-button-group">
+            <a href="#seccion-menu" class="btn-primary">
+              <span data-i18n="hero_cta_menu">Explorar la Carta Completa</span>
+              <svg class="svg-icon svg-icon-sm" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+            <a href="#seccion-reservas" class="btn-secondary">
+              <span data-i18n="hero_cta_reserve">Reservar una Mesa</span>
+            </a>
+          </div>
+
+          <!-- Barra de accesos directos de alta visibilidad -->
+          <div class="hero-quick-access">
+            <span class="hero-quick-label" data-i18n="hero_quick_label">ACCESOS RÁPIDOS:</span>
+            <div class="hero-quick-pills">
+              <a href="#seccion-menu" class="hero-quick-pill" data-i18n="hero_quick_menu">Carta & Precios</a>
+              <a href="#cat-block-baby-beef" id="hero-baby-beef-btn" class="hero-quick-pill" data-i18n="hero_quick_baby">7 Baby Beef Insigne</a>
+              <a href="#seccion-reservas" class="hero-quick-pill" data-i18n="hero_quick_reserve">Reservas en Sala</a>
+              <a href="#seccion-takeaway" class="hero-quick-pill" data-i18n="hero_quick_takeaway">Pide & Recoge</a>
+              <a href="#seccion-takeaway" class="hero-quick-pill" data-i18n="hero_quick_delivery">Domicilios Cali</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       PORTAL HUB: LAS 4 OPCIONES PRINCIPALES (Sustituye el Linktree ruidoso)
+       ========================================================================== -->
+  <section id="portal-servicios" class="portal-hub-section">
+    <div class="container">
+      <div class="portal-hub-banner">
+        <div class="section-badge-glowing">
+          <span class="badge-dot"></span>
+          <span data-i18n="portal_badge">Canales Oficiales de Atención · San Antonio 1982</span>
+        </div>
+        <h2 class="portal-hub-main-title" data-i18n="portal_title">¿Cómo Deseas Vivir la Experiencia Primos Hoy?</h2>
+        <p class="portal-hub-main-subtitle" data-i18n="portal_subtitle">
+          Selecciona tu opción preferida para disfrutar de la mejor parrilla de Cali, ya sea en nuestra casona colonial o desde tu casa.
+        </p>
+      </div>
+
+      <div class="portal-hub-grid">
+        <!-- 1. Menú Digital -->
+        <a href="#seccion-menu" class="portal-card" data-spotlight="true">
+          <div class="portal-card-top">
+            <div class="portal-card-icon">
+              <svg class="svg-icon svg-icon-lg" viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 1 10 10v8a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-8A10 10 0 0 1 12 2z"/><path d="M2 12h20"/><path d="M12 2v10"/></svg>
+            </div>
+            <span class="portal-card-pill gold" data-i18n="card1_pill">En Sala & Terraza</span>
+          </div>
+          <div class="portal-card-tag" data-i18n="card1_tag">Cocina a la Brasa</div>
+          <h3 class="portal-card-title" data-i18n="card1_title">Carta Digital</h3>
+          <p class="portal-card-desc" data-i18n="card1_desc">Explora nuestros 7 cortes de Baby Beef, entradas al carbón, hamburguesas artesanales y postres con precios oficiales.</p>
+          <div class="portal-card-btn-wrap">
+            <span class="portal-cta-btn primary" data-i18n="card1_btn">Ver Carta Digital ↓</span>
+          </div>
+        </a>
+
+        <!-- 2. Reservas -->
+        <a href="#seccion-reservas" class="portal-card" data-spotlight="true">
+          <div class="portal-card-top">
+            <div class="portal-card-icon">
+              <svg class="svg-icon svg-icon-lg" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            </div>
+            <span class="portal-card-pill wine" data-i18n="card2_pill">Reserva Previa</span>
+          </div>
+          <div class="portal-card-tag" data-i18n="card2_tag">Experiencia en Mesa</div>
+          <h3 class="portal-card-title" data-i18n="card2_title">Reserva tu Mesa</h3>
+          <p class="portal-card-desc" data-i18n="card2_desc">Asegura tu lugar en el patio colonial de los helechos o en el salón de arte para celebraciones y cenas en familia.</p>
+          <div class="portal-card-btn-wrap">
+            <span class="portal-cta-btn outline" data-i18n="card2_btn">Reservar Mesa →</span>
+          </div>
+        </a>
+
+        <!-- 3. Pide & Recoge -->
+        <a href="#seccion-takeaway" class="portal-card" data-spotlight="true">
+          <div class="portal-card-top">
+            <div class="portal-card-icon">
+              <svg class="svg-icon svg-icon-lg" viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+            </div>
+            <span class="portal-card-pill" data-i18n="card3_pill">Listo al Llegar</span>
+          </div>
+          <div class="portal-card-tag" data-i18n="card3_tag">Retiro en el Local</div>
+          <h3 class="portal-card-title" data-i18n="card3_title">Pide & Recoge</h3>
+          <p class="portal-card-desc" data-i18n="card3_desc">Ordena tus cortes a la brasa con anticipación y recógelos recién preparados sin filas en nuestra sede de San Antonio.</p>
+          <div class="portal-card-btn-wrap">
+            <span class="portal-cta-btn outline" data-i18n="card3_btn">Pedir para Llevar →</span>
+          </div>
+        </a>
+
+        <!-- 4. Domicilios Programados -->
+        <a href="#seccion-takeaway" class="portal-card" data-spotlight="true">
+          <div class="portal-card-top">
+            <div class="portal-card-icon">
+              <svg class="svg-icon svg-icon-lg" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
+            <span class="portal-card-pill" data-i18n="card4_pill">Empaque Térmico</span>
+          </div>
+          <div class="portal-card-tag" data-i18n="card4_tag">A tu Puerta en Cali</div>
+          <h3 class="portal-card-title" data-i18n="card4_title">Domicilios en Cali</h3>
+          <p class="portal-card-desc" data-i18n="card4_desc">Llevamos el sabor del carbón a tu hogar con sellado térmico especial que conserva el término, aroma y temperatura.</p>
+          <div class="portal-card-btn-wrap">
+            <span class="portal-cta-btn outline" data-i18n="card4_btn">Pedir a Domicilio →</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECCIÓN UNIFICADA: CARTA DIGITAL & CATÁLOGO GASTRONÓMICO
+       (Sin redundancias de 3 grids, con búsqueda y filtros instantáneos)
+       ========================================================================== -->
+  <section id="seccion-menu" class="menu-master-section">
+    <div class="container">
+      <header class="section-header">
+        <div>
+          <div class="section-label" data-i18n="catalog_super">Cultura Gastronómica · San Antonio 1982</div>
+          <h2 class="section-title" data-i18n="catalog_title">Nuestra Carta Digital & Especialidades a la Brasa</h2>
+          <p class="section-subtitle" data-i18n="catalog_desc">
+            Explora nuestras 14 categorías. Personaliza tu término de cocción, selecciona tus guarniciones y realiza tu pedido directamente desde tu mesa.
+          </p>
+        </div>
+      </header>
+
+      <!-- Buscador en Tiempo Real -->
+      <div class="search-container">
+        <div class="search-box">
+          <svg class="svg-icon search-icon" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+          <input type="text" id="menu-search-input" class="search-input" placeholder="Buscar en la carta por plato, salsa o ingrediente (ej. Béarnaise, pimienta, angus, champiñones, limonada)..." aria-label="Buscar en la carta" data-i18n-ph="search_placeholder">
+          <button id="search-clear" class="search-clear-btn" aria-label="Limpiar búsqueda">✕ Limpiar</button>
+        </div>
+      </div>
+
+      <!-- Barra Sticky de Categorías con Iconos SVG y Controles de Desplazamiento (CERO EMOJIS) -->
+      <nav class="category-nav-wrapper" aria-label="Navegación de categorías del menú">
+        <button id="scroller-arrow-prev" class="scroller-arrow-btn prev" aria-label="Categorías anteriores" type="button" disabled>
+          <svg viewBox="0 0 24 24" class="svg-icon"><polyline points="15 18 9 12 15 6"></polyline></svg>
+        </button>
+        <div id="category-scroller" class="category-scroll-strip" role="tablist">
+          <!-- Generado dinámicamente con SVGs en app.js -->
+        </div>
+        <button id="scroller-arrow-next" class="scroller-arrow-btn next" aria-label="Categorías siguientes" type="button">
+          <svg viewBox="0 0 24 24" class="svg-icon"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        </button>
+      </nav>
+
+      <!-- Directorio Visual de las 14 Secciones Oficiales (Sustituye la lista de Cluvi con diseño editorial de lujo) -->
+      <section class="category-directory-card" aria-label="Directorio de las 14 secciones del menú">
+        <div class="category-directory-header">
+          <div class="cat-dir-header-title">
+            <span class="cat-dir-badge" data-i18n="dir_badge">Directorio Oficial</span>
+            <h3 data-i18n="dir_title">Explora Nuestras 14 Secciones Gastronómicas</h3>
+          </div>
+          <span class="category-directory-sub" data-i18n="dir_hint">Toca cualquier sección para ir directamente a sus platos</span>
+        </div>
+        <div id="category-directory-grid" class="category-directory-grid">
+          <!-- 14 botones oficiales inyectados dinámicamente por app.js -->
+        </div>
+      </section>
+
+      <!-- Franja de Filtro Activo con Botón de Restablecer -->
+      <div id="active-filter-strip" class="active-filter-strip" style="display: none;">
+        <div class="filter-strip-info">
+          <span class="filter-strip-dot"></span>
+          <span id="active-filter-text">Mostrando: Ensaladas (3 platos)</span>
+        </div>
+        <button id="btn-reset-filter" class="filter-strip-reset-btn" type="button" data-i18n="filter_reset_btn">
+          ✕ Ver todos los platos (Restablecer)
+        </button>
+      </div>
+
+      <!-- Contenedor Maestro Unificado de Platos -->
+      <div id="menu-catalog-container" class="menu-catalog-container">
+        <!-- Renderizado dinámicamente por app.js -->
+      </div>
+    </div>
+  </section>
+
+  <main class="container">
+    <!-- ==========================================================================
+         MÓDULO DE RESERVAS DE MESA
+         ========================================================================== -->
+    <section id="seccion-reservas" class="booking-section">
+      <div class="booking-grid">
+        <div class="booking-info">
+          <div class="section-label" data-i18n="booking_tag">Atención en Sala</div>
+          <h3 data-i18n="booking_title">Reserva tu mesa en el corazón de San Antonio</h3>
+          <p data-i18n="booking_desc">
+            Disfruta de una velada tranquila bajo los árboles de nuestro patio colonial o en el salón principal rodeado de arte colombiano. Atendemos reservas para parejas, familias y eventos privados.
+          </p>
+          <div class="booking-highlights">
+            <div class="booking-highlight-item">
+              <div class="icon-circle">
+                <svg class="svg-icon" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              </div>
+              <span data-i18n="booking_hl1">Confirmación inmediata con el equipo de recepción de Primos</span>
+            </div>
+            <div class="booking-highlight-item">
+              <div class="icon-circle">
+                <svg class="svg-icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              </div>
+              <span data-i18n="booking_hl2">Servicio continuo de lunes a domingo de 12:00 m. a 10:30 p.m.</span>
+            </div>
+            <div class="booking-highlight-item">
+              <div class="icon-circle">
+                <svg class="svg-icon" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              </div>
+              <span data-i18n="booking_hl3">Carrera 10 # 2-18, Barrio Colonial San Antonio, Cali</span>
+            </div>
+          </div>
+        </div>
+
+        <form id="booking-form" class="booking-form">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="booking-date" class="form-label" data-i18n="booking_date_lbl">Fecha</label>
+              <input type="date" id="booking-date" class="form-control" required>
+            </div>
+            <div class="form-group">
+              <label for="booking-time" class="form-label" data-i18n="booking_time_lbl">Hora</label>
+              <select id="booking-time" class="form-control" required>
+                <option value="12:30">12:30 p.m. (Almuerzo)</option>
+                <option value="13:30">01:30 p.m. (Almuerzo)</option>
+                <option value="14:30">02:30 p.m. (Almuerzo tardío)</option>
+                <option value="19:00" selected>07:00 p.m. (Cena)</option>
+                <option value="20:00">08:00 p.m. (Cena)</option>
+                <option value="21:00">09:00 p.m. (Cena)</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="booking-guests" class="form-label" data-i18n="booking_guests_lbl">Número de Comensales</label>
+              <select id="booking-guests" class="form-control" required>
+                <option value="1 persona">1 persona</option>
+                <option value="2 personas" selected>2 personas</option>
+                <option value="3 a 4 personas">3 a 4 personas</option>
+                <option value="5 a 6 personas">5 a 6 personas</option>
+                <option value="7 a 10 personas">7 a 10 personas</option>
+                <option value="Más de 10 (Evento privado)">Más de 10 (Evento privado)</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="booking-area" class="form-label" data-i18n="booking_area_lbl">Ambiente de Preferencia</label>
+              <select id="booking-area" class="form-control">
+                <option value="Patio Colonial al aire libre" selected>Patio Colonial al aire libre</option>
+                <option value="Salón Galería de Arte">Salón Galería de Arte</option>
+                <option value="Salón Principal Interior">Salón Principal Interior</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="booking-name" class="form-label" data-i18n="booking_name_lbl">Nombre y Apellidos</label>
+            <input type="text" id="booking-name" class="form-control" placeholder="Ej. Carlos Mendoza" required>
+          </div>
+
+          <div class="form-group">
+            <label for="booking-occasion" class="form-label" data-i18n="booking_occasion_lbl">Motivo o Notas Especiales</label>
+            <input type="text" id="booking-occasion" class="form-control" placeholder="Ej. Aniversario, cumpleaños, mesa cerca de plantas...">
+          </div>
+
+          <button type="submit" class="btn-primary" style="width: 100%; justify-content: center; margin-top: 10px;">
+            <span data-i18n="booking_btn">Confirmar Reserva por WhatsApp →</span>
+            <svg class="svg-icon svg-icon-sm" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECCIÓN: PIDE & RECOGE / DOMICILIOS PROGRAMADOS
+         ========================================================================== -->
+    <section id="seccion-takeaway" class="services-split-section">
+      <!-- Panel 1: Pide & Recoge -->
+      <div class="service-card-panel">
+        <div class="section-label">Takeaway Directo</div>
+        <h3>Pide y Recoge en San Antonio</h3>
+        <p>
+          Si prefieres disfrutar en casa o en una reunión particular sin demoras de mensajería, realiza tu pedido con antelación y retíralo directamente en nuestra sede histórica.
+        </p>
+        <ul class="service-meta-list">
+          <li>
+            <svg class="svg-icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            <span>Tiempo de preparación promedio: 25 a 35 minutos</span>
+          </li>
+          <li>
+            <svg class="svg-icon" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span>Punto de entrega: Carrera 10 # 2-18, Barrio San Antonio</span>
+          </li>
+          <li>
+            <svg class="svg-icon" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            <span>Empaque sellado térmico que mantiene el calor de la carne</span>
+          </li>
+        </ul>
+        <a href="https://wa.me/573153771321?text=Hola%20Primos%20Restaurante%2C%20quisiera%20hacer%20un%20pedido%20para%20recoger%20en%20San%20Antonio." target="_blank" rel="noopener" class="btn-primary" style="align-self: flex-start;">
+          <span>Pedir para Recoger vía WhatsApp</span>
+        </a>
+      </div>
+
+      <!-- Panel 2: Domicilios Programados -->
+      <div class="service-card-panel">
+        <div class="section-label">Despacho Especial</div>
+        <h3>Domicilios Programados en Cali</h3>
+        <p>
+          Llevamos nuestros cortes Baby Beef, hamburguesas angus y costillas BBQ a tu puerta en Cali, asegurando que cada término y salsa conserve sus cualidades organolépticas originales.
+        </p>
+        <ul class="service-meta-list">
+          <li>
+            <svg class="svg-icon" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span>Cobertura: Oeste, Sur, Norte y Centro de Cali</span>
+          </li>
+          <li>
+            <svg class="svg-icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            <span>Pedidos programados con 1 hora de anticipación</span>
+          </li>
+          <li>
+            <svg class="svg-icon" viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 1 10 10v8a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-8A10 10 0 0 1 12 2z"/></svg>
+            <span>Salsas servidas en recipientes térmicos separados</span>
+          </li>
+        </ul>
+        <a href="https://wa.me/573153771321?text=Hola%20Primos%20Restaurante%2C%20quisiera%20programar%20un%20domicilio%20en%20Cali." target="_blank" rel="noopener" class="btn-secondary" style="align-self: flex-start; color: var(--text-primary); border-color: var(--border-strong);">
+          <span>Programar Domicilio vía WhatsApp</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECCIÓN: NUESTRA HISTORIA · 44 AÑOS DE TRADICIÓN (1982 - 2026)
+         Extraído y diseñado según primos.com.co/historia con Taste DNA & UI/UX Pro Max
+         ========================================================================== -->
+    <section id="seccion-historia" class="historia-master-container">
+      <!-- Acto 0 / Hero de Historia -->
+      <div class="historia-hero-block borde-afiche">
+        <div class="container historia-hero-inner text-center">
+          <p class="asteriscos historia-overtag uppercase" data-i18n="historia_tag">Nuestra historia</p>
+          <h2 class="historia-headline uppercase" data-i18n="historia_title">
+            Había una vez un teatro y una <span class="text-rojo">hamburguesa</span>
+          </h2>
+          <p class="historia-lead" data-i18n="historia_subtitle">
+            Más de 40 años siendo parte de Cali. Esta es la historia de Primos: de una barra junto al Teatro San Fernando a la casa de los caleños en San Antonio.
+          </p>
+
+          <figure class="ticket relative mx-auto historia-ticket-figure">
+            <img src="https://primos.com.co/_astro/fachada.B4kG2hMg_Z1CE7KB.webp" 
+                 alt="Fachada terracota de Primos en San Antonio, coronada por los gatos de Hernando Tejada" 
+                 loading="lazy" class="historia-ticket-img">
+            <span class="sello-fecha" aria-hidden="true">EST.<br>1982</span>
+            <figcaption class="mano historia-ticket-caption" data-i18n="historia_caption_fachada">
+              los gatos de Tejadita nos cuidan desde el techo
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+
+      <!-- Acto Timeline / 44 Años en Cinco Actos -->
+      <div class="historia-timeline-block borde-afiche">
+        <div class="container py-16">
+          <h3 class="historia-section-title text-center uppercase" data-i18n="historia_timeline_title">44 años en cinco actos</h3>
+          <p class="asteriscos historia-overtag text-center" data-i18n="historia_timeline_tag">como en el teatro de al lado</p>
+
+          <ol class="timeline-actos-list mx-auto mt-12">
+            <li class="acto-item">
+              <span class="acto-year">1982</span>
+              <p class="acto-text" data-i18n="historia_acto_1982">
+                Nace Primos: una barra pequeña en un local junto al emblemático Teatro San Fernando. Hernando Tejada, «Tejadita», pintor, escultor y viejo amigo de la familia, nos regala pequeñas tallas en madera de sus ahora famosos gatos. Hasta los servilleteros eran gatos hechos por sus propias manos.
+              </p>
+            </li>
+            <li class="acto-item">
+              <span class="acto-year">1990s</span>
+              <p class="acto-text" data-i18n="historia_acto_1990s">
+                Silenciosamente y sin prisa, los gatos se toman el Parque del Perro. Clientes traen fotos y afiches de gatos de sus viajes para decorar el restaurante. Generación tras generación, familias caleñas comparten su primera cita, su cumpleaños y su reunión de viejos amigos en nuestras mesas.
+              </p>
+            </li>
+            <li class="acto-item">
+              <span class="acto-year">2020</span>
+              <p class="acto-text" data-i18n="historia_acto_2020">
+                La pandemia nos golpea fuerte. Cerramos nuestras sedes; más de 100 personas de nuestra familia quedan sin empleo. Y entonces pasa algo que no esperábamos: recibimos más de 3.000 mensajes de cariño de los caleños. El cierre sale en El País, Noticias Caracol y Q'hubo. Eso no se olvida.
+              </p>
+            </li>
+            <li class="acto-item">
+              <span class="acto-year">2022</span>
+              <p class="acto-text" data-i18n="historia_acto_2022">
+                Con ese apoyo como combustible, volvemos. Esta vez en el barrio San Antonio, el barrio más bonito y patrimonial de Cali, con sus casas coloniales, sus calles empedradas y su ambiente bohemio. El barrio que mejor representa el alma de esta ciudad.
+              </p>
+            </li>
+            <li class="acto-item">
+              <span class="acto-year">2026</span>
+              <p class="acto-text" data-i18n="historia_acto_2026">
+                En la Carrera 5 # 2-123, Primos sigue siendo lo que siempre fue: un lugar donde los caleños son protagonistas. Donde la hamburguesa gourmet convive con la historia, el arte y la identidad vallecaucana.
+              </p>
+            </li>
+          </ol>
+        </div>
+      </div>
+
+      <!-- La Historia Completa -->
+      <div class="historia-fullstory-block borde-afiche">
+        <article class="container historia-article-inner py-16">
+          <h3 class="historia-section-title uppercase" data-i18n="historia_completa_title">La historia completa</h3>
+          <div class="historia-paragraphs space-y-6 mt-8">
+            <p data-i18n="historia_p1">
+              En 1982, junto al emblemático Teatro San Fernando en Cali, abrió sus puertas Primos. No nació con pretensiones de grandeza. Nació con sabor, con calidez, con el instinto de que la buena comida une a la gente.
+            </p>
+            <p data-i18n="historia_p2">
+              Y así fue. Poco a poco, Primos se convirtió en el lugar al que los caleños van cuando quieren celebrar, cuando extrañan casa, cuando quieren presentarle a alguien la esencia de su ciudad. Generación tras generación, familias caleñas han compartido su primera cita, su cumpleaños, su reunión de viejos amigos en nuestras mesas. Hay algo en la hamburguesa y los cortes de Primos que no se encuentra en otra parte: una combinación de ingredientes y de ese momento en que muerdes y todo encaja, que se ha convertido en parte del ADN gastronómico de Cali.
+            </p>
+            <p data-i18n="historia_p3">
+              Desde el puro comienzo, Hernando Tejada, el pintor y escultor, viejo amigo de la familia, nos traía de regalo pequeñas tallas en madera de sus ahora famosos gatos. Hasta los servilleteros eran gatos hechos por sus propias manos. Nos sentimos orgullosos cuando nació, muchos años después, el Gato del Río, pues lo vimos crecer desde pequeñito. Queremos seguir honrando la memoria de Tejadita y sus gatos, patrimonio cultural de todos los caleños.
+            </p>
+            <p><strong class="font-semibold" data-i18n="historia_p4_b">Luego llegó la pandemia.</strong></p>
+            <p data-i18n="historia_p4">
+              Como a tantos negocios en Colombia y en el mundo, la crisis de 2020 nos golpeó fuerte. Cerramos nuestras sedes. Más de 100 personas que eran parte de nuestra familia quedaron sin empleo. Fue uno de los momentos más difíciles de nuestra historia.
+            </p>
+            <p><strong class="font-semibold" data-i18n="historia_p5_b">Pero entonces pasó algo que no esperábamos.</strong></p>
+            <p data-i18n="historia_p5">
+              Recibimos más de 3.000 mensajes de caleños expresando su cariño y apoyo. Familias enteras escribiendo para decirnos que Primos era su lugar, que sus historias de amor pasaban por nuestras mesas. Eso no se olvida.
+            </p>
+            <p data-i18n="historia_p6">
+              En 2022, con ese apoyo como combustible, volvimos. Esta vez en el barrio San Antonio, el barrio más bonito y patrimonial de Cali, con sus casas coloniales coloridas, sus calles empedradas, su ambiente bohemio y tranquilo. El barrio que mejor representa el alma de esta ciudad.
+            </p>
+            <p data-i18n="historia_p7">
+              Hoy, en la Carrera 5 # 2-123, Primos sigue siendo lo que siempre fue: un lugar donde los caleños son protagonistas. Donde la hamburguesa gourmet y los cortes tradicionales conviven con la historia, el arte y la identidad vallecaucana.
+            </p>
+            <p class="mano historia-signoff-quote" data-i18n="historia_signoff">
+              Si todavía no nos conoces, ya es hora.<br>
+              Si nos conoces de toda la vida, bienvenido de vuelta a casa.
+            </p>
+          </div>
+
+          <!-- Galería Fotográfica Patrimonial -->
+          <div class="historia-photos-grid mt-12">
+            <figure class="historia-photo-item">
+              <img src="https://primos.com.co/_astro/interior-cuadros.dNstss3I_ZFwLLj.webp" 
+                   alt="Cuadros de gatos en las paredes de Primos, homenaje a Hernando Tejada" loading="lazy">
+              <figcaption class="mano historia-photo-caption" data-i18n="historia_cap_cuadros">
+                Cuadros de gatos en el salón, homenaje a Hernando Tejada
+              </figcaption>
+            </figure>
+            <figure class="historia-photo-item">
+              <img src="https://primos.com.co/_astro/patio.DyxCDcLc_Zs6dzY.webp" 
+                   alt="Patio interior de Primos en la casa colonial de San Antonio" loading="lazy">
+              <figcaption class="mano historia-photo-caption" data-i18n="historia_cap_patio">
+                Patio interior en la casona colonial de San Antonio
+              </figcaption>
+            </figure>
+          </div>
+        </article>
+      </div>
+
+      <!-- Banner de Cierre: Ven a escribir tu historia con nosotros -->
+      <div class="historia-invite-banner relative">
+        <img src="https://primos.com.co/_astro/mesa-compartida.Cp5TeOQV_oLHTK.webp" 
+             alt="Mesa compartida en Primos con platos y jugos naturales" loading="lazy" class="historia-banner-img">
+        <div class="historia-banner-overlay">
+          <div class="historia-banner-content text-center">
+            <h3 class="historia-banner-title uppercase" data-i18n="historia_cta_title">Ven a escribir tu historia con nosotros</h3>
+            <a href="#seccion-reservas" class="btn-reservar-banner mt-6 inline-block" data-i18n="historia_cta_btn">Reservar mesa</a>
+            <p class="historia-banner-address mt-4" data-i18n="historia_cta_info">Carrera 5 # 2-123, San Antonio, Cali · 315 377 1321</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================================================
+       PIE DE PÁGINA COMPLETO (Con Redes y Enlace a Política de Datos)
+       ========================================================================== -->
+  <footer class="main-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Columna 1: Marca & Resumen -->
+        <div class="footer-brand">
+          <h4>Primos Restaurante</h4>
+          <p>
+            Tradición y gastronomía clásica en el barrio San Antonio, Cali desde 1982. Especialistas en Baby Beef a la parrilla, cocina de autor y eventos en un entorno colonial único.
+          </p>
+          <div class="social-links-row">
+            <!-- Facebook -->
+            <a href="https://www.facebook.com/PrimosColombia/?mibextid=ZbWKwL" target="_blank" rel="noopener" class="social-btn" aria-label="Facebook de Primos">
+              <svg class="svg-icon svg-icon-sm" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            </a>
+            <!-- Instagram -->
+            <a href="https://www.instagram.com/primoscolombia/" target="_blank" rel="noopener" class="social-btn" aria-label="Instagram de Primos">
+              <svg class="svg-icon svg-icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+            <!-- WhatsApp -->
+            <a href="https://wa.me/573153771321" target="_blank" rel="noopener" class="social-btn" aria-label="WhatsApp de Primos">
+              <svg class="svg-icon svg-icon-sm" viewBox="0 0 24 24" fill="currentColor"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766 0-3.18-2.587-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.312.045-.698.053-2.072-.516-1.503-.623-2.453-2.146-2.528-2.247-.075-.101-.611-.815-.611-1.554 0-.74.385-1.103.522-1.253.136-.149.298-.186.398-.186.099 0 .198.001.284.005.091.004.213-.034.333.254.125.298.423 1.03.46 1.105.037.075.061.164.012.264-.049.099-.074.162-.148.249-.075.087-.157.194-.224.261-.075.075-.153.156-.066.305.087.149.387.639.831 1.034.571.508 1.053.666 1.203.741.149.075.236.062.323-.037.087-.1.373-.435.473-.585.099-.149.198-.124.335-.075.137.049.87.41 1.02.485.149.075.249.112.286.174.037.062.037.362-.107.767zM12 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2 22l4.985-1.309A9.957 9.957 0 0 0 12 22c5.523 0 10-4.477 10-10S17.523 2 12 2z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Columna 2: Navegación Rápida -->
+        <div class="footer-col">
+          <h5>Servicios</h5>
+          <ul>
+            <li><a href="#seccion-baby-beef">Cortes Baby Beef</a></li>
+            <li><a href="#seccion-menu">Carta Digital Completa</a></li>
+            <li><a href="#seccion-reservas">Reservar Mesa</a></li>
+            <li><a href="#seccion-takeaway">Pide y Recoge</a></li>
+            <li><a href="#seccion-takeaway">Domicilios Programados</a></li>
+          </ul>
+        </div>
+
+        <!-- Columna 3: Ubicación y Horarios -->
+        <div class="footer-col">
+          <h5>Sede San Antonio</h5>
+          <ul>
+            <li>Carrera 10 # 2-18</li>
+            <li>Barrio San Antonio, Cali</li>
+            <li>Lunes a Domingo</li>
+            <li>12:00 m. a 10:30 p.m.</li>
+            <li><a href="https://maps.google.com/?q=Primos+Restaurante+San+Antonio+Cali" target="_blank" rel="noopener">Abrir en Google Maps &rarr;</a></li>
+          </ul>
+        </div>
+
+        <!-- Columna 4: Legal & Confianza -->
+        <div class="footer-col">
+          <h5>Contacto & Legal</h5>
+          <ul>
+            <li>Atención directa: 315 377 1321</li>
+            <li><button id="open-data-modal-btn" style="color: rgba(255,255,255,0.8); text-decoration: underline; text-align: left;">Política Manejo de Datos</button></li>
+            <li>Ley 1581 de Habeas Data</li>
+            <li>Cali, Valle del Cauca</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© 2026 Primos Restaurante · San Antonio Cali 1982. Todos los derechos reservados.</span>
+        <span>Plataforma web oficial rediseñada con altos estándares culinarios y sin ruido visual.</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       MODAL DE PLATO INTERACTIVO (Nativo accesible con <dialog>)
+       ========================================================================== -->
+  <dialog id="dish-modal" aria-labelledby="modal-dish-title">
+    <div class="modal-header">
+      <img id="modal-dish-img" src="" alt="" class="modal-header-img">
+      <button id="modal-close-btn" class="modal-close-btn" aria-label="Cerrar ventana">✕</button>
+    </div>
+
+    <div class="modal-content">
+      <h3 id="modal-dish-title" class="modal-title">Nombre del Plato</h3>
+      <div id="modal-dish-price" class="modal-price">$ 0</div>
+      <p id="modal-dish-desc" class="modal-desc">Descripción detallada y notas de cata del plato.</p>
+
+      <!-- Selector de Término de Cocción (Solo para carnes) -->
+      <div id="cooking-terms-section" style="display: none;">
+        <div class="custom-section-label">
+          <span>Término de la Carne</span>
+          <span style="font-weight: 400; color: var(--text-muted); font-size: 0.74rem;">Obligatorio</span>
+        </div>
+        <div id="cooking-terms-options" class="custom-options-grid">
+          <!-- Inyectado por JS -->
+        </div>
+      </div>
+
+      <!-- Selector de Acompañamiento -->
+      <div id="sides-section" style="display: none;">
+        <div class="custom-section-label">
+          <span>Acompañamiento</span>
+          <span style="font-weight: 400; color: var(--text-muted); font-size: 0.74rem;">Elige 1 opción</span>
+        </div>
+        <div id="sides-options" class="custom-options-grid">
+          <!-- Inyectado por JS -->
+        </div>
+      </div>
+
+      <!-- Sugerencia de Maridaje -->
+      <div id="pairing-section" class="pairing-box" style="display: none;">
+        <svg class="svg-icon" viewBox="0 0 24 24" style="color: var(--accent-wine); flex-shrink: 0;"><path d="M8 22h8M12 15v7M7 2h10l1 9a6 6 0 0 1-12 0l1-9z"/></svg>
+        <div>
+          <strong>Maridaje sugerido:</strong>
+          <span id="pairing-text">Club Colombia Dorada</span>
+        </div>
+      </div>
+
+      <!-- Instrucciones especiales -->
+      <label for="dish-notes" class="custom-section-label">
+        <span>Instrucciones Especiales / Alergias</span>
+      </label>
+      <textarea id="dish-notes" class="notes-textarea" placeholder="Ej. Salsa al lado, sin sal agregada, etc."></textarea>
+
+      <!-- Controles de Cantidad y Botón de Agregar -->
+      <div class="modal-footer">
+        <div class="quantity-control">
+          <button id="modal-qty-minus" class="qty-btn" aria-label="Disminuir cantidad">-</button>
+          <span id="modal-qty-val" class="qty-display">1</span>
+          <button id="modal-qty-plus" class="qty-btn" aria-label="Aumentar cantidad">+</button>
+        </div>
+        <button id="modal-add-btn" class="btn-add-modal">
+          <span>Agregar a Mi Orden</span>
+          <span id="modal-total-preview">($ 0)</span>
+        </button>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- ==========================================================================
+       MODAL DE POLÍTICA DE DATOS PERSONALES (HABEAS DATA LEY 1581)
+       ========================================================================== -->
+  <dialog id="data-modal" aria-labelledby="data-modal-title">
+    <div class="data-modal-header">
+      <h3 id="data-modal-title" class="data-modal-title">Política de Tratamiento de Datos</h3>
+      <button id="data-modal-close" class="modal-close-btn" style="position: static; background: var(--bg-surface-subtle); color: var(--text-primary);" aria-label="Cerrar">✕</button>
+    </div>
+    <div class="data-modal-body">
+      <p>
+        En cumplimiento de la <strong>Ley Estatutaria 1581 de 2012</strong> y su Decreto Reglamentario 1377 de 2013 de la República de Colombia, <strong>Primos Restaurante</strong> informa que los datos personales suministrados para reservas, pedidos en mesa, takeaway y domicilios son tratados con estricta confidencialidad y para los fines exclusivos del servicio gastronómico.
+      </p>
+      <h4>Finalidades del Tratamiento:</h4>
+      <ul>
+        <li>Gestión, confirmación y recordatorio de reservas de mesa en San Antonio.</li>
+        <li>Despacho y entrega de pedidos para llevar (takeaway) y a domicilio.</li>
+        <li>Atención de requerimientos especiales, alérgenos y preferencias culinarias.</li>
+        <li>Cumplimiento de obligaciones legales, fiscales y contables.</li>
+      </ul>
+      <h4>Derechos del Titular:</h4>
+      <p>
+        Usted tiene derecho a conocer, actualizar, rectificar y suprimir sus datos en cualquier momento comunicándose a través de nuestros canales oficiales.
+      </p>
+      <p style="margin-top: 20px;">
+        <a href="https://drive.google.com/file/d/1ECC4IUGIOxewwJR6LFvlAMLlBCq-Q1Rw/view?usp=sharing" target="_blank" rel="noopener" class="btn-secondary" style="color: var(--text-primary); border-color: var(--border-strong); display: inline-flex;">
+          <span>Consultar Documento Completo Oficial en Google Drive &rarr;</span>
+        </a>
+      </p>
+    </div>
+  </dialog>
+
+  <!-- ==========================================================================
+       DRAWER LATERAL: MI ORDEN / MI MESA (COMANDAS & WHATSAPP DIRECTO)
+       ========================================================================== -->
+  <div id="drawer-backdrop" class="drawer-backdrop"></div>
+  <aside id="order-drawer" class="order-drawer" aria-label="Mi Orden y resumen de comanda">
+    <div class="drawer-header">
+      <div class="drawer-header-brand">
+        <span class="drawer-pretitle">Primos San Antonio · Cali 1982</span>
+        <div class="drawer-title-row">
+          <h3 class="drawer-title" data-i18n="order_title">Mi Orden</h3>
+          <span id="drawer-badge-count" class="drawer-badge">0</span>
+        </div>
+      </div>
+      <button id="drawer-close-btn" class="drawer-close-btn" aria-label="Cerrar orden" title="Cerrar">✕</button>
+    </div>
+
+    <!-- Modalidad de Atención -->
+    <div class="drawer-service-selector">
+      <div class="drawer-mode-tabs" role="tablist">
+        <button type="button" class="drawer-mode-tab active" data-order-mode="mesa">
+          <span data-i18n="order_mode_table">En Sala / Mesa</span>
+        </button>
+        <button type="button" class="drawer-mode-tab" data-order-mode="recoge">
+          <span data-i18n="order_mode_pickup">Pide & Recoge</span>
+        </button>
+        <button type="button" class="drawer-mode-tab" data-order-mode="domicilio">
+          <span data-i18n="order_mode_delivery">Domicilio</span>
+        </button>
+      </div>
+
+      <div class="drawer-mode-inputs">
+        <div id="field-wrap-mesa" class="mode-input-field">
+          <label for="drawer-table-number" data-i18n="order_table_label">Número de Mesa en Sala:</label>
+          <div class="table-input-control">
+            <span class="table-prefix">Mesa #</span>
+            <input type="number" id="drawer-table-number" value="1" min="1" max="99" class="input-table-pill">
+          </div>
+        </div>
+        <div id="field-wrap-recoge" class="mode-input-field" style="display: none;">
+          <label for="drawer-pickup-name" data-i18n="order_pickup_name_label">Nombre de quien recoge:</label>
+          <input type="text" id="drawer-pickup-name" class="input-full-pill" placeholder="Tu nombre completo">
+        </div>
+        <div id="field-wrap-domicilio" class="mode-input-field" style="display: none;">
+          <label for="drawer-delivery-addr" data-i18n="order_delivery_addr_label">Dirección en Cali & Barrio:</label>
+          <input type="text" id="drawer-delivery-addr" class="input-full-pill" placeholder="Ej. Cra 5 # 2-12, San Antonio">
+        </div>
+      </div>
+    </div>
+
+    <div id="drawer-items" class="drawer-body">
+      <!-- Inyectado por app.js -->
+    </div>
+
+    <div class="drawer-footer">
+      <!-- Observaciones generales de cocina -->
+      <div class="drawer-notes-wrap">
+        <input type="text" id="drawer-kitchen-notes" class="drawer-kitchen-notes-input" placeholder="Instrucciones para cocina (ej. salsas aparte, sin hielo)...">
+      </div>
+
+      <div class="summary-row">
+        <span data-i18n="order_subtotal">Subtotal platos:</span>
+        <strong id="summary-subtotal">$ 0</strong>
+      </div>
+
+      <!-- Propina Voluntaria del 10% -->
+      <div class="tip-toggle-row">
+        <label for="tip-checkbox">
+          <input type="checkbox" id="tip-checkbox" checked>
+          <span data-i18n="order_tip">Propina voluntaria sugerida (10%)</span>
+        </label>
+        <span id="tip-amount">$ 0</span>
+      </div>
+
+      <div class="summary-total-row">
+        <span data-i18n="order_total">Total estimado:</span>
+        <span id="summary-total" class="total-wine">$ 0</span>
+      </div>
+
+      <button id="btn-send-whatsapp" class="btn-whatsapp-order">
+        <svg class="svg-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766 0-3.18-2.587-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.312.045-.698.053-2.072-.516-1.503-.623-2.453-2.146-2.528-2.247-.075-.101-.611-.815-.611-1.554 0-.74.385-1.103.522-1.253.136-.149.298-.186.398-.186.099 0 .198.001.284.005.091.004.213-.034.333.254.125.298.423 1.03.46 1.105.037.075.061.164.012.264-.049.099-.074.162-.148.249-.075.087-.157.194-.224.261-.075.075-.153.156-.066.305.087.149.387.639.831 1.034.571.508 1.053.666 1.203.741.149.075.236.062.323-.037.087-.1.373-.435.473-.585.099-.149.198-.124.335-.075.137.049.87.41 1.02.485.149.075.249.112.286.174.037.062.037.362-.107.767zM12 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2 22l4.985-1.309A9.957 9.957 0 0 0 12 22c5.523 0 10-4.477 10-10S17.523 2 12 2z"/></svg>
+        <span data-i18n="order_send_btn">Enviar Pedido a WhatsApp Oficial</span>
+      </button>
+
+      <div class="drawer-footer-actions">
+        <button id="btn-keep-ordering" class="btn-keep-ordering" data-i18n="order_keep_btn">
+          + Seguir agregando platos
+        </button>
+        <button id="btn-clear-order" class="btn-clear-order" data-i18n="order_clear_btn">
+          Vaciar orden
+        </button>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Barra Flotante de Mi Orden para Móviles (Sticky Bottom) -->
+  <aside id="mobile-cart-bar" class="mobile-cart-bar" aria-label="Acceso flotante a tu orden">
+    <div class="mobile-cart-content">
+      <div class="mobile-cart-details">
+        <span class="mobile-cart-pill" id="mobile-cart-count">0</span>
+        <div class="mobile-cart-pricing">
+          <span class="mobile-cart-label" data-i18n="cart_btn">Mi Orden</span>
+          <strong id="mobile-cart-total">$ 0</strong>
+        </div>
+      </div>
+      <button type="button" id="mobile-cart-view-btn" class="mobile-cart-action-btn">
+        <span data-i18n="order_view_btn">Ver Orden</span>
+        <svg class="svg-icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </button>
+    </div>
+  </aside>
+
+  <!-- Scripts -->
+  <script src="menu-data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
