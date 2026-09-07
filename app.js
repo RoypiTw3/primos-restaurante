@@ -718,21 +718,63 @@
     }
   }
 
-  // Configuración del Tema
+  // Configuración del Tema Robusta (Mobile-First & Color Scheme Awareness)
   function setupTheme() {
-    const savedTheme = localStorage.getItem('primos_theme') || 'light';
-    setTheme(savedTheme);
+    let savedTheme = null;
+    try {
+      savedTheme = localStorage.getItem('primos_theme');
+    } catch (e) {
+      console.warn('localStorage not accessible', e);
+    }
+
+    if (savedTheme === 'dark' || savedTheme === 'light') {
+      setTheme(savedTheme);
+    } else {
+      // Si el usuario no ha elegido manualmente, detecta la preferencia de su dispositivo
+      const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+      setTheme(prefersDark ? 'dark' : 'light');
+    }
+
+    // Escucha cambios de preferencia del sistema si el usuario no tiene guardado un tema fijo
+    if (window.matchMedia) {
+      window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+        let hasSaved = false;
+        try {
+          hasSaved = Boolean(localStorage.getItem('primos_theme'));
+        } catch (_) {}
+        if (!hasSaved) {
+          setTheme(e.matches ? 'dark' : 'light');
+        }
+      });
+    }
   }
 
   function setTheme(theme) {
-    document.documentElement.setAttribute('data-theme', theme);
-    localStorage.setItem('primos_theme', theme);
-    if (theme === 'dark') {
-      dom.themeIconMoon.style.display = 'none';
-      dom.themeIconSun.style.display = 'block';
-    } else {
-      dom.themeIconMoon.style.display = 'block';
-      dom.themeIconSun.style.display = 'none';
+    const activeTheme = theme === 'dark' ? 'dark' : 'light';
+    document.documentElement.setAttribute('data-theme', activeTheme);
+    document.documentElement.style.colorScheme = activeTheme;
+
+    try {
+      localStorage.setItem('primos_theme', activeTheme);
+    } catch (e) {
+      // Ignorar restricciones de almacenamiento local
+    }
+
+    // Actualizar meta theme-color para navegadores móviles (Safari iOS, Brave, Chrome)
+    const metaThemeColor = document.getElementById('theme-color-meta');
+    if (metaThemeColor) {
+      metaThemeColor.setAttribute('content', activeTheme === 'dark' ? '#161311' : '#FDFBF4');
+    }
+
+    // Sincronizar iconos
+    if (dom.themeIconMoon && dom.themeIconSun) {
+      if (activeTheme === 'dark') {
+        dom.themeIconMoon.style.display = 'none';
+        dom.themeIconSun.style.display = 'block';
+      } else {
+        dom.themeIconMoon.style.display = 'block';
+        dom.themeIconSun.style.display = 'none';
+      }
     }
   }
 
