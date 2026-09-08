@@ -346,7 +346,7 @@ const PRIMOS_DATA = {
         "rawName": "AROMÁTICA",
         "price": 5900,
         "description": "Deliciosa preparación artesanal de Aromática.",
-        "image": "https://images.unsplash.com/photo-1576092768241-dec231879fc3?w=1200&auto=format&fit=crop&q=80",
+        "image": "assets/products/aromatica.jpg",
         "isSignature": false,
         "badge": "",
         "tags": [
@@ -408,7 +408,7 @@ const PRIMOS_DATA = {
         "rawName": "AGUA",
         "price": 9400,
         "description": "Deliciosa preparación artesanal de Agua.",
-        "image": "https://images.unsplash.com/photo-1548839140-29a749e1bc4e?w=1200&auto=format&fit=crop&q=80",
+        "image": "assets/products/agua.jpg",
         "isSignature": false,
         "badge": "",
         "tags": [
@@ -552,7 +552,7 @@ const PRIMOS_DATA = {
         "rawName": "CAFÉ AMERICANO",
         "price": 6900,
         "description": "Deliciosa preparación artesanal de Café Americano.",
-        "image": "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?w=1200&auto=format&fit=crop&q=80",
+        "image": "assets/products/cafe-americano.jpg",
         "isSignature": false,
         "badge": "",
         "tags": [
@@ -651,7 +651,7 @@ const PRIMOS_DATA = {
         "rawName": "CAFÉ LATTE",
         "price": 7200,
         "description": "Deliciosa preparación artesanal de Café Latte.",
-        "image": "https://images.unsplash.com/photo-1534778101976-62847782c213?w=1200&auto=format&fit=crop&q=80",
+        "image": "assets/products/cafe-latte.jpg",
         "isSignature": false,
         "badge": "",
         "tags": [
@@ -665,7 +665,7 @@ const PRIMOS_DATA = {
         "rawName": "AGUA CON GAS",
         "price": 9400,
         "description": "Deliciosa preparación artesanal de Agua con Gas.",
-        "image": "https://images.unsplash.com/photo-1559839914-17aae19cec71?w=1200&auto=format&fit=crop&q=80",
+        "image": "assets/products/agua-con-gas.jpg",
         "isSignature": false,
         "badge": "",
         "tags": [
@@ -679,7 +679,7 @@ const PRIMOS_DATA = {
         "rawName": "CERVEZA CORONA",
         "price": 16400,
         "description": "Deliciosa preparación artesanal de Cerveza Corona.",
-        "image": "https://images.unsplash.com/photo-1608270199042-3e2be52eb13b?w=1200&auto=format&fit=crop&q=80",
+        "image": "assets/products/cerveza-corona.jpg",
         "isSignature": false,
         "badge": "",
         "tags": [
@@ -1063,7 +1063,7 @@ const PRIMOS_DATA = {
         "rawName": "CERVEZA STELLA ARTOIS",
         "price": 16400,
         "description": "Deliciosa preparación artesanal de Cerveza Stella Artois.",
-        "image": "https://images.unsplash.com/photo-1535958636474-b021ee887b13?w=1200&auto=format&fit=crop&q=80",
+        "image": "assets/products/cerveza-stella.jpg",
         "isSignature": false,
         "badge": "",
         "tags": [
@@ -1861,7 +1861,7 @@ const PRIMOS_DATA = {
         "rawName": "MARACUYÁ LULO FIZZ",
         "price": 13200,
         "description": "Bebida refrescante, natural y burbujeante a base de maracuyá y lulo.",
-        "image": "https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?w=1200&auto=format&fit=crop&q=80",
+        "image": "assets/products/maracuya-lulo-fizz.jpg",
         "isSignature": false,
         "badge": "",
         "tags": [
@@ -1875,7 +1875,7 @@ const PRIMOS_DATA = {
         "rawName": "MANDARINA NATURAL RECIÉN EXPRIMIDA",
         "price": 16400,
         "description": "Deliciosa preparación artesanal de Mandarina Natural Recién Exprimida.",
-        "image": "https://images.unsplash.com/photo-1613478223719-2ab802602423?w=1200&auto=format&fit=crop&q=80",
+        "image": "assets/products/mandarina-natural.jpg",
         "isSignature": false,
         "badge": "",
         "tags": [
@@ -1955,7 +1955,7 @@ const PRIMOS_DATA = {
         "rawName": "LIMONADA NATURAL",
         "price": 10400,
         "description": "Deliciosa preparación artesanal de Limonada Natural.",
-        "image": "https://images.unsplash.com/photo-1523371067-1ac3840b545f?w=1200&auto=format&fit=crop&q=80",
+        "image": "assets/products/limonada-natural.jpg",
         "isSignature": false,
         "badge": "",
         "tags": [
@@ -1983,7 +1983,7 @@ const PRIMOS_DATA = {
         "rawName": "JUGOS EN LECHE",
         "price": 13200,
         "description": "Mango, Lulo, Mora, Fresa, Guanábana, Maracuyá.",
-        "image": "https://images.unsplash.com/photo-1553530666-ba11a7da3888?w=1200&auto=format&fit=crop&q=80",
+        "image": "assets/products/jugo-en-leche.jpg",
         "isSignature": false,
         "badge": "",
         "tags": [
@@ -2039,7 +2039,7 @@ const PRIMOS_DATA = {
         "rawName": "MIX MANDARINA+MANGO+JENGIBRE",
         "price": 16200,
         "description": "Deliciosa preparación artesanal de Mix Mandarina+Mango+Jengibre.",
-        "image": "https://images.unsplash.com/photo-1536935338788-846bb9981813?w=1200&auto=format&fit=crop&q=80",
+        "image": "assets/products/mix-mandarina-mango.jpg",
         "isSignature": false,
         "badge": "",
         "tags": [
@@ -2053,7 +2053,7 @@ const PRIMOS_DATA = {
         "rawName": "COCA-COLA ORIGINAL",
         "price": 9400,
         "description": "Deliciosa preparación artesanal de Coca-cola Original.",
-        "image": "https://images.unsplash.com/photo-1622483767028-3f66f32aef97?w=1200&auto=format&fit=crop&q=80",
+        "image": "assets/products/coca-cola-original.jpg",
         "isSignature": false,
         "badge": "",
         "tags": [
@@ -2067,7 +2067,7 @@ const PRIMOS_DATA = {
         "rawName": "COCA-COLA ZERO",
         "price": 9400,
         "description": "Deliciosa preparación artesanal de Coca-cola Zero.",
-        "image": "https://images.unsplash.com/photo-1554866585-cd94860890b7?w=1200&auto=format&fit=crop&q=80",
+        "image": "assets/products/coca-cola-zero.jpg",
         "isSignature": false,
         "badge": "",
         "tags": [
@@ -2081,7 +2081,7 @@ const PRIMOS_DATA = {
         "rawName": "GINGER",
         "price": 9400,
         "description": "Deliciosa preparación artesanal de Ginger.",
-        "image": "https://images.unsplash.com/photo-1527661591475-527312dd65f5?w=1200&auto=format&fit=crop&q=80",
+        "image": "assets/products/ginger.jpg",
         "isSignature": false,
         "badge": "",
         "tags": [
@@ -2095,7 +2095,7 @@ const PRIMOS_DATA = {
         "rawName": "SODA",
         "price": 9400,
         "description": "Deliciosa preparación artesanal de Soda.",
-        "image": "https://images.unsplash.com/photo-1560512823-829485b8bf24?w=1200&auto=format&fit=crop&q=80",
+        "image": "assets/products/soda.jpg",
         "isSignature": false,
         "badge": "",
         "tags": [
