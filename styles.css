@@ -3284,25 +3284,53 @@ dialog#data-modal::backdrop {
 
 .social-links-row {
   display: flex;
+  align-items: center;
   gap: 12px;
 }
 
 .social-btn {
-  width: 36px;
-  height: 36px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.1);
-  display: flex;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(197, 160, 89, 0.35);
+  display: inline-flex;
   align-items: center;
   justify-content: center;
-  color: #FFFFFF;
-  transition: all var(--transition-base);
+  color: #EDE7DF;
+  text-decoration: none;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  flex-shrink: 0;
 }
 
 .social-btn:hover {
-  background: var(--accent-gold);
-  color: var(--text-primary);
+  background: var(--color-gold);
+  border-color: var(--color-gold);
+  color: #12100E;
   transform: translateY(-2px);
+  box-shadow: 0 4px 14px rgba(197, 160, 89, 0.35);
+}
+
+.social-btn.social-btn-wa:hover {
+  background: #25D366;
+  border-color: #25D366;
+  color: #FFFFFF;
+  box-shadow: 0 4px 14px rgba(37, 211, 102, 0.45);
+}
+
+.social-icon {
+  width: 18px;
+  height: 18px;
+  display: block;
+  flex-shrink: 0;
+  fill: currentColor;
+  stroke: none !important;
+}
+
+.social-icon.social-icon-stroke {
+  fill: none !important;
+  stroke: currentColor !important;
+  stroke-width: 2px;
 }
 
 /* ==========================================================================
