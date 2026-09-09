@@ -13,9 +13,9 @@ const PRIMOS_DATA = {
     location: {
       neighborhood: "San Antonio",
       city: "Cali, Valle del Cauca, Colombia",
-      address: "Carrera 10 # 2-18, Barrio San Antonio",
+      address: "Carrera 5 # 2-123, Barrio San Antonio",
       reference: "A pocas cuadras de la Colina y la Capilla de San Antonio",
-      mapsUrl: "https://maps.google.com/?q=Primos+Restaurante+San+Antonio+Cali"
+      mapsUrl: "https://maps.google.com/?q=Primos+Restaurante+Carrera+5+%23+2-123+San+Antonio+Cali"
     },
     contact: {
       phoneDisplay: "315 377 1321",

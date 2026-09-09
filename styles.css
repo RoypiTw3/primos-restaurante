@@ -1943,21 +1943,17 @@ a {
 /* Marco Ticket Perforado (Estilo entrada de teatro San Fernando 1982) */
 .ticket {
   position: relative;
-  border: 2px solid var(--color-negro);
-  background: radial-gradient(circle, var(--color-crema) 4px, transparent 4.5px) left center / 10px 20px repeat-y,
-              radial-gradient(circle, var(--color-crema) 4px, transparent 4.5px) right center / 10px 20px repeat-y,
-              var(--color-papel);
+  border: 1px solid rgba(197, 160, 89, 0.45);
+  background: var(--bg-card);
   padding: 12px;
-  border-radius: 4px;
-  box-shadow: 0 4px 18px rgba(33, 30, 25, 0.08);
+  border-radius: 12px;
+  box-shadow: 0 12px 32px rgba(18, 16, 14, 0.08);
 }
 
 [data-theme="dark"] .ticket {
-  border-color: rgba(245, 235, 216, 0.6);
-  background: radial-gradient(circle, var(--bg-surface-subtle) 4px, transparent 4.5px) left center / 10px 20px repeat-y,
-              radial-gradient(circle, var(--bg-surface-subtle) 4px, transparent 4.5px) right center / 10px 20px repeat-y,
-              var(--bg-canvas);
-  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.45);
+  border-color: rgba(197, 160, 89, 0.35);
+  background: var(--bg-card);
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.45);
 }
 
 /* Sello Circular de Fecha Rotado */
@@ -1968,9 +1964,9 @@ a {
   width: 82px;
   height: 82px;
   border-radius: 50%;
-  border: 3px solid var(--color-rojo);
-  background: var(--color-crema);
-  color: var(--color-rojo);
+  border: 2px solid var(--color-gold);
+  background: var(--bg-surface);
+  color: var(--color-wine);
   display: grid;
   place-items: center;
   font-family: var(--font-sans);
@@ -1980,15 +1976,15 @@ a {
   letter-spacing: 0.08em;
   text-align: center;
   transform: rotate(-9deg);
-  box-shadow: 0 4px 14px rgba(237, 28, 36, 0.25);
+  box-shadow: 0 4px 18px rgba(197, 160, 89, 0.3);
   z-index: 10;
 }
 
 [data-theme="dark"] .sello-fecha {
-  background: #2A211D;
-  color: var(--color-rojo);
-  border-color: var(--color-rojo);
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.5);
+  background: #1C1916;
+  color: var(--color-gold);
+  border-color: var(--color-gold);
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.5);
 }
 
 /* ==========================================================================
@@ -2049,10 +2045,13 @@ a {
 }
 
 .historia-ticket-caption {
-  font-size: 1.7rem;
-  color: var(--text-secondary);
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 1.25rem;
+  color: var(--color-gold);
   padding-top: 14px;
-  line-height: 1.3;
+  line-height: 1.4;
+  text-align: center;
 }
 
 .historia-timeline-block {
@@ -2137,99 +2136,136 @@ a {
 }
 
 .historia-signoff-quote {
-  font-size: 1.85rem;
-  line-height: 1.4;
-  color: var(--text-primary);
-  margin-top: 36px;
-  padding: 20px 0;
-  border-top: 1px dashed var(--border-strong);
-  border-bottom: 1px dashed var(--border-strong);
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 500;
+  font-size: clamp(1.35rem, 2.8vw, 1.85rem);
+  line-height: 1.6;
+  color: var(--color-gold);
+  margin-top: 40px;
+  padding: 24px 16px;
+  border-top: 1px solid rgba(197, 160, 89, 0.35);
+  border-bottom: 1px solid rgba(197, 160, 89, 0.35);
   text-align: center;
+  background: rgba(197, 160, 89, 0.03);
+  border-radius: 4px;
 }
 
 .historia-photos-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 24px;
-  margin-top: 40px;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
+  gap: 28px;
+  margin-top: 44px;
 }
 
 .historia-photo-item {
   margin: 0;
+  border-radius: 12px;
+  overflow: hidden;
+  background: var(--bg-card);
+  border: 1px solid rgba(197, 160, 89, 0.35);
+  box-shadow: 0 10px 30px rgba(18, 16, 14, 0.08);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.historia-photo-item:hover {
+  transform: translateY(-4px);
+  border-color: var(--color-gold);
+  box-shadow: 0 16px 36px rgba(139, 30, 30, 0.16);
 }
 
 .historia-photo-item img {
   width: 100%;
   aspect-ratio: 4 / 3;
   object-fit: cover;
-  border: 2px solid var(--text-primary);
-  border-radius: 4px;
-  box-shadow: 0 4px 16px rgba(33, 30, 25, 0.08);
+  display: block;
+  background: #EAE6DF;
+  border: none;
 }
 
 [data-theme="dark"] .historia-photo-item img {
-  border-color: rgba(245, 235, 216, 0.6);
+  background: #1A1715;
 }
 
 .historia-photo-caption {
-  font-size: 1.3rem;
-  color: var(--text-secondary);
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 1.15rem;
+  color: var(--color-gold);
   text-align: center;
-  margin-top: 10px;
+  padding: 14px 18px;
+  background: var(--bg-card);
+  border-top: 1px solid rgba(197, 160, 89, 0.2);
+  letter-spacing: 0.02em;
 }
 
 .historia-invite-banner {
   position: relative;
   overflow: hidden;
+  border-radius: 16px;
+  margin: 48px auto 0;
+  max-width: 1100px;
+  border: 1px solid rgba(197, 160, 89, 0.35);
+  box-shadow: 0 16px 48px rgba(18, 16, 14, 0.15);
+  background: linear-gradient(135deg, #181513 0%, #291214 50%, #12100E 100%);
 }
 
 .historia-banner-img {
   width: 100%;
-  height: 360px;
+  height: 380px;
   object-fit: cover;
   display: block;
+  opacity: 0.65;
+  filter: brightness(0.9);
 }
 
 .historia-banner-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(33, 30, 25, 0.52);
+  background: radial-gradient(circle at center, rgba(30, 20, 18, 0.35) 0%, rgba(14, 12, 10, 0.85) 100%);
   display: grid;
   place-items: center;
-  padding: 24px;
+  padding: 36px 24px;
 }
 
 .historia-banner-title {
-  color: #FFFFFF;
-  font-size: clamp(1.6rem, 3.5vw, 2.4rem);
-  font-weight: 800;
-  letter-spacing: -0.01em;
+  color: #FDFBF7;
+  font-family: var(--font-serif);
+  font-size: clamp(1.8rem, 3.8vw, 2.6rem);
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.7);
 }
 
 .btn-reservar-banner {
-  background: var(--color-rojo);
-  color: #FFFFFF !important;
-  font-weight: 700;
-  font-size: 1.05rem;
+  background: linear-gradient(135deg, var(--color-wine) 0%, #681515 100%);
+  color: #FDFBF7 !important;
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 0.95rem;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
-  padding: 14px 36px;
-  border-radius: 6px;
+  letter-spacing: 0.14em;
+  padding: 16px 40px;
+  border-radius: 50px;
+  border: 1px solid rgba(197, 160, 89, 0.5);
+  box-shadow: 0 8px 24px rgba(139, 30, 30, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
   text-decoration: none;
   display: inline-block;
-  transition: background 0.2s ease, transform 0.15s ease;
-  box-shadow: 0 4px 16px rgba(237, 28, 36, 0.35);
 }
 
 .btn-reservar-banner:hover {
-  background: var(--color-rojo-oscuro);
   transform: translateY(-2px);
+  border-color: var(--color-gold);
+  box-shadow: 0 12px 32px rgba(197, 160, 89, 0.35);
 }
 
 .historia-banner-address {
-  color: rgba(255, 255, 255, 0.9);
+  color: rgba(245, 235, 216, 0.9);
+  font-family: var(--font-sans);
   font-size: 0.95rem;
-  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 
 /* ==========================================================================
@@ -3177,11 +3213,16 @@ dialog#data-modal::backdrop {
    Pie de Página Completo
    ========================================================================== */
 .main-footer {
-  background: var(--text-primary);
+  background: #141210;
   color: #EDE7DF;
   padding: 56px 0 28px;
   margin-top: 80px;
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  border-top: 1px solid rgba(197, 160, 89, 0.25);
+}
+
+[data-theme="dark"] .main-footer {
+  background: #0D0B0A;
+  border-top: 1px solid rgba(197, 160, 89, 0.2);
 }
 
 .footer-grid {
@@ -3514,11 +3555,35 @@ dialog#data-modal::backdrop {
   }
 
   .historia-ticket-caption {
-    font-size: 1.3rem;
+    font-size: 1.15rem;
   }
 
   .historia-signoff-quote {
-    font-size: 1.35rem;
+    font-size: 1.25rem;
+    padding: 18px 12px;
+  }
+
+  .historia-photos-grid {
+    gap: 18px;
+    margin-top: 28px;
+  }
+
+  .historia-invite-banner {
+    margin: 36px 12px 0;
+    border-radius: 12px;
+  }
+
+  .historia-banner-img {
+    height: 320px;
+  }
+
+  .historia-banner-title {
+    font-size: clamp(1.4rem, 5vw, 1.8rem);
+  }
+
+  .btn-reservar-banner {
+    padding: 12px 28px;
+    font-size: 0.85rem;
   }
 }
 
