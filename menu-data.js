@@ -1104,7 +1104,7 @@ const PRIMOS_DATA = {
         "rawName": "MALTEADA DE FRUTAS NATURALES",
         "price": 19900,
         "description": "Crea tu malteada con frutas 100% naturales y una deliciosa salsa artesanal.Opciones salsas: Mango, Lulo, Mora, Fresa, Guanábana, Maracuyá.Opciones de fruta: Mango, Lulo, Mora, Fresa, Guanábana, Maracuyá.",
-        "image": "https://images.cluvi.com/I5PBIXVAtm/w_1200_I5PBIXVAtm_adobe-express-file-2.jpg",
+        "image": "assets/products/malteada-frutas.jpg",
         "isSignature": false,
         "badge": "",
         "tags": [
