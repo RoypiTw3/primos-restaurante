@@ -908,7 +908,7 @@ const PRIMOS_DATA = {
         "rawName": "COPA DE HELADO",
         "price": 15900,
         "description": "Helado de vainilla, bañado con una salsa de tu elección: maracuyá, chocolate, fresa, frutos rojos o mora.",
-        "image": "https://images-mini.cluvi.com/kJebfdzjBs/w_1200_kJebfdzjBs_003-helado.png",
+        "image": "assets/products/copa-de-helado.jpg",
         "isSignature": false,
         "badge": "",
         "tags": [
@@ -1049,7 +1049,7 @@ const PRIMOS_DATA = {
         "rawName": "HAMBURGUESA TURCA",
         "price": 29900,
         "description": "Hamburguesa con carne de garbanzos y especias, en pan árabe. Acompañada de ensalada de tomate con tahini.",
-        "image": "https://images-mini.cluvi.com/6Cq6eArmrh/w_1200_6Cq6eArmrh_002-hamburguesa-turca.png",
+        "image": "assets/products/hamburguesa-turca.jpg",
         "isSignature": false,
         "badge": "",
         "tags": [
@@ -1480,7 +1480,7 @@ const PRIMOS_DATA = {
         "rawName": "SANDWICH FILETE DE POLLO CON QUESO GRATINADO",
         "price": 37900,
         "description": "Filete de pollo con tomate, rúcula bañada en vinagreta mediterránea y queso doble crema gratinado.",
-        "image": "https://images-mini.cluvi.com/GtUIsDvBMy/w_1200_GtUIsDvBMy_sandwich.png",
+        "image": "assets/products/sandwich-filete-pollo.jpg",
         "isSignature": false,
         "badge": "",
         "tags": [
