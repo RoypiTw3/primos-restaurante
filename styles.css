@@ -130,7 +130,7 @@ html {
   -moz-osx-font-smoothing: grayscale;
   background-color: var(--bg-canvas);
   color-scheme: light;
-  overflow-x: hidden;
+  overflow-x: clip;
   max-width: 100%;
   width: 100%;
 }
@@ -147,7 +147,7 @@ body {
   transition: background-color var(--transition-base), color var(--transition-base);
   min-height: 100vh;
   position: relative;
-  overflow-x: hidden;
+  overflow-x: clip;
   max-width: 100%;
   width: 100%;
   -webkit-text-size-adjust: 100%;
@@ -367,18 +367,18 @@ a {
    Encabezado Principal & Barra de Navegación Completa
    ========================================================================== */
 .main-header {
+  position: -webkit-sticky;
   position: sticky;
   top: 0;
-  z-index: 50;
+  z-index: 500;
   background: rgba(250, 247, 242, 0.94);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border-bottom: 1px solid var(--border-gold);
   box-shadow: 0 2px 14px rgba(28, 25, 23, 0.05);
-  transition: background-color var(--transition-base), border-color var(--transition-base);
+  transition: background-color var(--transition-base), border-color var(--transition-base), box-shadow var(--transition-base);
   width: 100%;
   max-width: 100%;
-  overflow-x: hidden;
 }
 
 [data-theme="dark"] .main-header {
@@ -1333,9 +1333,10 @@ a {
 
 /* Scroller Sticky de Categorías con Controles de Desplazamiento */
 .category-nav-wrapper {
+  position: -webkit-sticky;
   position: sticky;
-  top: 69px;
-  z-index: 40;
+  top: 65px;
+  z-index: 450;
   background: var(--bg-canvas);
   padding: 8px 0 14px;
   border-bottom: 1px solid var(--border-gold);
@@ -3395,7 +3396,6 @@ dialog#data-modal::backdrop {
   .main-header {
     width: 100%;
     max-width: 100%;
-    overflow: hidden;
   }
 
   .header-inner {

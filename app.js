@@ -838,7 +838,7 @@
     let headerOffset = customOffset;
     if (!headerOffset) {
       // Calcular dinámicamente la altura real de los elementos fijos/sticky
-      const navH = document.querySelector('.navbar')?.offsetHeight || 64;
+      const navH = document.querySelector('.main-header, .navbar')?.offsetHeight || 65;
       const catNavH = document.querySelector('.category-nav-wrapper')?.offsetHeight || 64;
       const filterStrip = document.getElementById('active-filter-strip');
       const filterH = (filterStrip && filterStrip.style.display !== 'none') ? (filterStrip.offsetHeight || 44) : 0;
