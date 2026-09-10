@@ -17,7 +17,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400;1,600&family=Jost:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;0,900;1,400;1,600;1,700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="styles.css?v=1982.4">
+  <link rel="stylesheet" href="styles.css?v=20260910_02">
 </head>
 <body>
 
@@ -70,9 +70,9 @@
         <a href="#portal" class="nav-link" data-i18n="nav_inicio">Inicio</a>
         <a href="#portal-servicios" class="nav-link" data-i18n="nav_servicios">Servicios</a>
         <a href="#seccion-menu" class="nav-link" data-i18n="nav_carta">Carta</a>
+        <a href="#seccion-historia" class="nav-link" data-i18n="nav_historia">Historia & Arte</a>
         <a href="#seccion-reservas" class="nav-link" data-i18n="nav_reservas">Reservas</a>
         <a href="#seccion-takeaway" class="nav-link" data-i18n="nav_takeaway">Pide & Recoge</a>
-        <a href="#seccion-historia" class="nav-link" data-i18n="nav_historia">Historia & Arte</a>
       </nav>
 
       <div class="header-actions">
@@ -161,7 +161,7 @@
         <a href="#seccion-menu" class="portal-card" data-spotlight="true">
           <div class="portal-card-top">
             <div class="portal-card-icon">
-              <svg class="svg-icon svg-icon-lg" viewBox="0 0 24 24"><circle cx="12.5" cy="8.5" r="2.5"/><path d="M12.5 2a6.5 6.5 0 0 0-6.22 4.6c-1.1 3.13-.78 3.9-3.18 6.08A3 3 0 0 0 5 18c4 0 8.4-1.8 11.4-4.8 3.48-3.48 4.6-6.2 4.6-7.2a4 4 0 0 0-4-4c-1.5 0-3 .5-4.5 2Z"/><path d="m18.5 6 2.19 4.5a6.48 6.48 0 0 1 .31 2"/></svg>
+              <svg class="svg-icon svg-icon-lg" viewBox="0 0 24 24"><path d="M5 6c3-3 8-3 12-1 3 2 4 6 2 9-2 5-6 8-10 8-3 0-5-2-5-5 0-4 0-8 1-11z"/><line x1="11" y1="5" x2="11" y2="18"/><line x1="6" y1="10" x2="16" y2="10"/><circle cx="11" cy="10" r="1.5"/></svg>
             </div>
             <span class="portal-card-pill gold" data-i18n="card1_pill">En Sala & Terraza</span>
           </div>
@@ -276,20 +276,146 @@
         </div>
       </section>
 
-      <!-- Franja de Filtro Activo con Botón de Restablecer -->
-      <div id="active-filter-strip" class="active-filter-strip" style="display: none;">
-        <div class="filter-strip-info">
-          <span class="filter-strip-dot"></span>
-          <span id="active-filter-text">Mostrando: Ensaladas (3 platos)</span>
-        </div>
-        <button id="btn-reset-filter" class="filter-strip-reset-btn" type="button" data-i18n="filter_fold_btn">
-          ✕ Plegar sección
-        </button>
-      </div>
-
       <!-- Contenedor Maestro Unificado de Platos -->
       <div id="menu-catalog-container" class="menu-catalog-container">
         <!-- Renderizado dinámicamente por app.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECCIÓN: NUESTRA HISTORIA · 44 AÑOS DE TRADICIÓN (1982 - 2026)
+       Extraído y diseñado según primos.com.co/historia con Taste DNA & UI/UX Pro Max
+       ========================================================================== -->
+  <section id="seccion-historia" class="historia-master-container">
+    <!-- Acto 0 / Hero de Historia -->
+    <div class="historia-hero-block borde-afiche">
+      <div class="container historia-hero-inner text-center">
+        <p class="asteriscos historia-overtag uppercase" data-i18n="historia_tag">Nuestra historia</p>
+        <h2 class="historia-headline uppercase" data-i18n="historia_title">
+          Había una vez un teatro y una <span class="text-rojo">hamburguesa</span>
+        </h2>
+        <p class="historia-lead" data-i18n="historia_subtitle">
+          Más de 40 años siendo parte de Cali. Esta es la historia de Primos: de una barra junto al Teatro San Fernando a la casa de los caleños en San Antonio.
+        </p>
+  
+        <figure class="ticket relative mx-auto historia-ticket-figure">
+          <img src="assets/history/fachada.webp" 
+               alt="Fachada colonial de Primos en San Antonio, coronada por los gatos de Hernando Tejada" 
+               class="historia-ticket-img" width="1200" height="675">
+          <span class="sello-fecha" aria-hidden="true">EST.<br>1982</span>
+          <figcaption class="historia-ticket-caption" data-i18n="historia_caption_fachada">
+            los gatos de Tejadita nos cuidan desde el techo
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  
+    <!-- Acto Timeline / 44 Años en Cinco Actos -->
+    <div class="historia-timeline-block borde-afiche">
+      <div class="container py-16">
+        <h3 class="historia-section-title text-center uppercase" data-i18n="historia_timeline_title">44 años en cinco actos</h3>
+        <p class="asteriscos historia-overtag text-center" data-i18n="historia_timeline_tag">como en el teatro de al lado</p>
+  
+        <ol class="timeline-actos-list mx-auto mt-12">
+          <li class="acto-item">
+            <span class="acto-year">1982</span>
+            <p class="acto-text" data-i18n="historia_acto_1982">
+              Nace Primos: una barra pequeña en un local junto al emblemático Teatro San Fernando. Hernando Tejada, «Tejadita», pintor, escultor y viejo amigo de la familia, nos regala pequeñas tallas en madera de sus ahora famosos gatos. Hasta los servilleteros eran gatos hechos por sus propias manos.
+            </p>
+          </li>
+          <li class="acto-item">
+            <span class="acto-year">1990s</span>
+            <p class="acto-text" data-i18n="historia_acto_1990s">
+              Silenciosamente y sin prisa, los gatos se toman el Parque del Perro. Clientes traen fotos y afiches de gatos de sus viajes para decorar el restaurante. Generación tras generación, familias caleñas comparten su primera cita, su cumpleaños y su reunión de viejos amigos en nuestras mesas.
+            </p>
+          </li>
+          <li class="acto-item">
+            <span class="acto-year">2020</span>
+            <p class="acto-text" data-i18n="historia_acto_2020">
+              La pandemia nos golpea fuerte. Cerramos nuestras sedes; más de 100 personas de nuestra familia quedan sin empleo. Y entonces pasa algo que no esperábamos: recibimos más de 3.000 mensajes de cariño de los caleños. El cierre sale en El País, Noticias Caracol y Q'hubo. Eso no se olvida.
+            </p>
+          </li>
+          <li class="acto-item">
+            <span class="acto-year">2022</span>
+            <p class="acto-text" data-i18n="historia_acto_2022">
+              Con ese apoyo como combustible, volvemos. Esta vez en el barrio San Antonio, el barrio más bonito y patrimonial de Cali, con sus casas coloniales, sus calles empedradas y su ambiente bohemio. El barrio que mejor representa el alma de esta ciudad.
+            </p>
+          </li>
+          <li class="acto-item">
+            <span class="acto-year">2026</span>
+            <p class="acto-text" data-i18n="historia_acto_2026">
+              En la Carrera 5 # 2-123, Primos sigue siendo lo que siempre fue: un lugar donde los caleños son protagonistas. Donde la hamburguesa gourmet convive con la historia, el arte y la identidad vallecaucana.
+            </p>
+          </li>
+        </ol>
+      </div>
+    </div>
+  
+    <!-- La Historia Completa -->
+    <div class="historia-fullstory-block borde-afiche">
+      <article class="container historia-article-inner py-16">
+        <h3 class="historia-section-title uppercase" data-i18n="historia_completa_title">La historia completa</h3>
+        <div class="historia-paragraphs space-y-6 mt-8">
+          <p data-i18n="historia_p1">
+            En 1982, junto al emblemático Teatro San Fernando en Cali, abrió sus puertas Primos. No nació con pretensiones de grandeza. Nació con sabor, con calidez, con el instinto de que la buena comida une a la gente.
+          </p>
+          <p data-i18n="historia_p2">
+            Y así fue. Poco a poco, Primos se convirtió en el lugar al que los caleños van cuando quieren celebrar, cuando extrañan casa, cuando quieren presentarle a alguien la esencia de su ciudad. Generación tras generación, familias caleñas han compartido su primera cita, su cumpleaños, su reunión de viejos amigos en nuestras mesas. Hay algo en la hamburguesa y los cortes de Primos que no se encuentra en otra parte: una combinación de ingredientes y de ese momento en que muerdes y todo encaja, que se ha convertido en parte del ADN gastronómico de Cali.
+          </p>
+          <p data-i18n="historia_p3">
+            Desde el puro comienzo, Hernando Tejada, el pintor y escultor, viejo amigo de la familia, nos traía de regalo pequeñas tallas en madera de sus ahora famosos gatos. Hasta los servilleteros eran gatos hechos por sus propias manos. Nos sentimos orgullosos cuando nació, muchos años después, el Gato del Río, pues lo vimos crecer desde pequeñito. Queremos seguir honrando la memoria de Tejadita y sus gatos, patrimonio cultural de todos los caleños.
+          </p>
+          <p><strong class="font-semibold" data-i18n="historia_p4_b">Luego llegó la pandemia.</strong></p>
+          <p data-i18n="historia_p4">
+            Como a tantos negocios en Colombia y en el mundo, la crisis de 2020 nos golpeó fuerte. Cerramos nuestras sedes. Más de 100 personas que eran parte de nuestra familia quedaron sin empleo. Fue uno de los momentos más difíciles de nuestra historia.
+          </p>
+          <p><strong class="font-semibold" data-i18n="historia_p5_b">Pero entonces pasó algo que no esperábamos.</strong></p>
+          <p data-i18n="historia_p5">
+            Recibimos más de 3.000 mensajes de caleños expresando su cariño y apoyo. Familias enteras escribiendo para decirnos que Primos era su lugar, que sus historias de amor pasaban por nuestras mesas. Eso no se olvida.
+          </p>
+          <p data-i18n="historia_p6">
+            En 2022, con ese apoyo como combustible, volvimos. Esta vez en el barrio San Antonio, el barrio más bonito y patrimonial de Cali, con sus casas coloniales coloridas, sus calles empedradas, su ambiente bohemio y tranquilo. El barrio que mejor representa el alma de esta ciudad.
+          </p>
+          <p data-i18n="historia_p7">
+            Hoy, en la Carrera 5 # 2-123, Primos sigue siendo lo que siempre fue: un lugar donde los caleños son protagonistas. Donde la hamburguesa gourmet y los cortes tradicionales conviven con la historia, el arte y la identidad vallecaucana.
+          </p>
+          <p class="historia-signoff-quote" data-i18n="historia_signoff">
+            Si todavía no nos conoces, ya es hora.<br>
+            Si nos conoces de toda la vida, bienvenido de vuelta a casa.
+          </p>
+        </div>
+  
+        <!-- Galería Fotográfica Patrimonial -->
+        <div class="historia-photos-grid mt-12">
+          <figure class="historia-photo-item">
+            <img src="assets/history/interior-cuadros.webp" 
+                 alt="Cuadros de gatos en las paredes de Primos, homenaje a Hernando Tejada" width="800" height="600">
+            <figcaption class="historia-photo-caption" data-i18n="historia_cap_cuadros">
+              Cuadros de gatos en el salón, homenaje a Hernando Tejada
+            </figcaption>
+          </figure>
+          <figure class="historia-photo-item">
+            <img src="assets/history/patio.webp" 
+                 alt="Patio interior de Primos en la casa colonial de San Antonio" width="800" height="600">
+            <figcaption class="historia-photo-caption" data-i18n="historia_cap_patio">
+              Patio interior en la casona colonial de San Antonio
+            </figcaption>
+          </figure>
+        </div>
+      </article>
+    </div>
+  
+    <!-- Banner de Cierre: Ven a escribir tu historia con nosotros -->
+    <div class="historia-invite-banner relative">
+      <img src="assets/history/mesa-compartida.webp" 
+           alt="Mesa compartida en Primos con platos y jugos naturales" class="historia-banner-img" width="1200" height="400">
+      <div class="historia-banner-overlay">
+        <div class="historia-banner-content text-center">
+          <h3 class="historia-banner-title uppercase" data-i18n="historia_cta_title">Ven a escribir tu historia con nosotros</h3>
+          <a href="#seccion-reservas" class="btn-reservar-banner mt-6 inline-block" data-i18n="historia_cta_btn">Reservar mesa</a>
+          <p class="historia-banner-address mt-4" data-i18n="historia_cta_info">Carrera 5 # 2-123, San Antonio, Cali · 315 377 1321</p>
+        </div>
       </div>
     </div>
   </section>
@@ -444,142 +570,7 @@
       </div>
     </section>
 
-    <!-- ==========================================================================
-         SECCIÓN: NUESTRA HISTORIA · 44 AÑOS DE TRADICIÓN (1982 - 2026)
-         Extraído y diseñado según primos.com.co/historia con Taste DNA & UI/UX Pro Max
-         ========================================================================== -->
-    <section id="seccion-historia" class="historia-master-container">
-      <!-- Acto 0 / Hero de Historia -->
-      <div class="historia-hero-block borde-afiche">
-        <div class="container historia-hero-inner text-center">
-          <p class="asteriscos historia-overtag uppercase" data-i18n="historia_tag">Nuestra historia</p>
-          <h2 class="historia-headline uppercase" data-i18n="historia_title">
-            Había una vez un teatro y una <span class="text-rojo">hamburguesa</span>
-          </h2>
-          <p class="historia-lead" data-i18n="historia_subtitle">
-            Más de 40 años siendo parte de Cali. Esta es la historia de Primos: de una barra junto al Teatro San Fernando a la casa de los caleños en San Antonio.
-          </p>
 
-          <figure class="ticket relative mx-auto historia-ticket-figure">
-            <img src="assets/history/fachada.webp" 
-                 alt="Fachada colonial de Primos en San Antonio, coronada por los gatos de Hernando Tejada" 
-                 class="historia-ticket-img" width="1200" height="675">
-            <span class="sello-fecha" aria-hidden="true">EST.<br>1982</span>
-            <figcaption class="historia-ticket-caption" data-i18n="historia_caption_fachada">
-              los gatos de Tejadita nos cuidan desde el techo
-            </figcaption>
-          </figure>
-        </div>
-      </div>
-
-      <!-- Acto Timeline / 44 Años en Cinco Actos -->
-      <div class="historia-timeline-block borde-afiche">
-        <div class="container py-16">
-          <h3 class="historia-section-title text-center uppercase" data-i18n="historia_timeline_title">44 años en cinco actos</h3>
-          <p class="asteriscos historia-overtag text-center" data-i18n="historia_timeline_tag">como en el teatro de al lado</p>
-
-          <ol class="timeline-actos-list mx-auto mt-12">
-            <li class="acto-item">
-              <span class="acto-year">1982</span>
-              <p class="acto-text" data-i18n="historia_acto_1982">
-                Nace Primos: una barra pequeña en un local junto al emblemático Teatro San Fernando. Hernando Tejada, «Tejadita», pintor, escultor y viejo amigo de la familia, nos regala pequeñas tallas en madera de sus ahora famosos gatos. Hasta los servilleteros eran gatos hechos por sus propias manos.
-              </p>
-            </li>
-            <li class="acto-item">
-              <span class="acto-year">1990s</span>
-              <p class="acto-text" data-i18n="historia_acto_1990s">
-                Silenciosamente y sin prisa, los gatos se toman el Parque del Perro. Clientes traen fotos y afiches de gatos de sus viajes para decorar el restaurante. Generación tras generación, familias caleñas comparten su primera cita, su cumpleaños y su reunión de viejos amigos en nuestras mesas.
-              </p>
-            </li>
-            <li class="acto-item">
-              <span class="acto-year">2020</span>
-              <p class="acto-text" data-i18n="historia_acto_2020">
-                La pandemia nos golpea fuerte. Cerramos nuestras sedes; más de 100 personas de nuestra familia quedan sin empleo. Y entonces pasa algo que no esperábamos: recibimos más de 3.000 mensajes de cariño de los caleños. El cierre sale en El País, Noticias Caracol y Q'hubo. Eso no se olvida.
-              </p>
-            </li>
-            <li class="acto-item">
-              <span class="acto-year">2022</span>
-              <p class="acto-text" data-i18n="historia_acto_2022">
-                Con ese apoyo como combustible, volvemos. Esta vez en el barrio San Antonio, el barrio más bonito y patrimonial de Cali, con sus casas coloniales, sus calles empedradas y su ambiente bohemio. El barrio que mejor representa el alma de esta ciudad.
-              </p>
-            </li>
-            <li class="acto-item">
-              <span class="acto-year">2026</span>
-              <p class="acto-text" data-i18n="historia_acto_2026">
-                En la Carrera 5 # 2-123, Primos sigue siendo lo que siempre fue: un lugar donde los caleños son protagonistas. Donde la hamburguesa gourmet convive con la historia, el arte y la identidad vallecaucana.
-              </p>
-            </li>
-          </ol>
-        </div>
-      </div>
-
-      <!-- La Historia Completa -->
-      <div class="historia-fullstory-block borde-afiche">
-        <article class="container historia-article-inner py-16">
-          <h3 class="historia-section-title uppercase" data-i18n="historia_completa_title">La historia completa</h3>
-          <div class="historia-paragraphs space-y-6 mt-8">
-            <p data-i18n="historia_p1">
-              En 1982, junto al emblemático Teatro San Fernando en Cali, abrió sus puertas Primos. No nació con pretensiones de grandeza. Nació con sabor, con calidez, con el instinto de que la buena comida une a la gente.
-            </p>
-            <p data-i18n="historia_p2">
-              Y así fue. Poco a poco, Primos se convirtió en el lugar al que los caleños van cuando quieren celebrar, cuando extrañan casa, cuando quieren presentarle a alguien la esencia de su ciudad. Generación tras generación, familias caleñas han compartido su primera cita, su cumpleaños, su reunión de viejos amigos en nuestras mesas. Hay algo en la hamburguesa y los cortes de Primos que no se encuentra en otra parte: una combinación de ingredientes y de ese momento en que muerdes y todo encaja, que se ha convertido en parte del ADN gastronómico de Cali.
-            </p>
-            <p data-i18n="historia_p3">
-              Desde el puro comienzo, Hernando Tejada, el pintor y escultor, viejo amigo de la familia, nos traía de regalo pequeñas tallas en madera de sus ahora famosos gatos. Hasta los servilleteros eran gatos hechos por sus propias manos. Nos sentimos orgullosos cuando nació, muchos años después, el Gato del Río, pues lo vimos crecer desde pequeñito. Queremos seguir honrando la memoria de Tejadita y sus gatos, patrimonio cultural de todos los caleños.
-            </p>
-            <p><strong class="font-semibold" data-i18n="historia_p4_b">Luego llegó la pandemia.</strong></p>
-            <p data-i18n="historia_p4">
-              Como a tantos negocios en Colombia y en el mundo, la crisis de 2020 nos golpeó fuerte. Cerramos nuestras sedes. Más de 100 personas que eran parte de nuestra familia quedaron sin empleo. Fue uno de los momentos más difíciles de nuestra historia.
-            </p>
-            <p><strong class="font-semibold" data-i18n="historia_p5_b">Pero entonces pasó algo que no esperábamos.</strong></p>
-            <p data-i18n="historia_p5">
-              Recibimos más de 3.000 mensajes de caleños expresando su cariño y apoyo. Familias enteras escribiendo para decirnos que Primos era su lugar, que sus historias de amor pasaban por nuestras mesas. Eso no se olvida.
-            </p>
-            <p data-i18n="historia_p6">
-              En 2022, con ese apoyo como combustible, volvimos. Esta vez en el barrio San Antonio, el barrio más bonito y patrimonial de Cali, con sus casas coloniales coloridas, sus calles empedradas, su ambiente bohemio y tranquilo. El barrio que mejor representa el alma de esta ciudad.
-            </p>
-            <p data-i18n="historia_p7">
-              Hoy, en la Carrera 5 # 2-123, Primos sigue siendo lo que siempre fue: un lugar donde los caleños son protagonistas. Donde la hamburguesa gourmet y los cortes tradicionales conviven con la historia, el arte y la identidad vallecaucana.
-            </p>
-            <p class="historia-signoff-quote" data-i18n="historia_signoff">
-              Si todavía no nos conoces, ya es hora.<br>
-              Si nos conoces de toda la vida, bienvenido de vuelta a casa.
-            </p>
-          </div>
-
-          <!-- Galería Fotográfica Patrimonial -->
-          <div class="historia-photos-grid mt-12">
-            <figure class="historia-photo-item">
-              <img src="assets/history/interior-cuadros.webp" 
-                   alt="Cuadros de gatos en las paredes de Primos, homenaje a Hernando Tejada" width="800" height="600">
-              <figcaption class="historia-photo-caption" data-i18n="historia_cap_cuadros">
-                Cuadros de gatos en el salón, homenaje a Hernando Tejada
-              </figcaption>
-            </figure>
-            <figure class="historia-photo-item">
-              <img src="assets/history/patio.webp" 
-                   alt="Patio interior de Primos en la casa colonial de San Antonio" width="800" height="600">
-              <figcaption class="historia-photo-caption" data-i18n="historia_cap_patio">
-                Patio interior en la casona colonial de San Antonio
-              </figcaption>
-            </figure>
-          </div>
-        </article>
-      </div>
-
-      <!-- Banner de Cierre: Ven a escribir tu historia con nosotros -->
-      <div class="historia-invite-banner relative">
-        <img src="assets/history/mesa-compartida.webp" 
-             alt="Mesa compartida en Primos con platos y jugos naturales" class="historia-banner-img" width="1200" height="400">
-        <div class="historia-banner-overlay">
-          <div class="historia-banner-content text-center">
-            <h3 class="historia-banner-title uppercase" data-i18n="historia_cta_title">Ven a escribir tu historia con nosotros</h3>
-            <a href="#seccion-reservas" class="btn-reservar-banner mt-6 inline-block" data-i18n="historia_cta_btn">Reservar mesa</a>
-            <p class="historia-banner-address mt-4" data-i18n="historia_cta_info">Carrera 5 # 2-123, San Antonio, Cali · 315 377 1321</p>
-          </div>
-        </div>
-      </div>
-    </section>
   </main>
 
   <!-- ==========================================================================
@@ -861,7 +852,7 @@
   </aside>
 
   <!-- Scripts -->
-  <script src="menu-data.js?v=1982.2"></script>
-  <script src="app.js?v=1982.2"></script>
+  <script src="menu-data.js?v=20260910_02"></script>
+  <script src="app.js?v=20260910_02"></script>
 </body>
 </html>

@@ -12,13 +12,13 @@
 
   // Diccionario de Iconografía Vectorial SVG Artesanal (Sustituye 100% los emojis con símbolos gastronómicos auténticos)
   const SVG_ICONS = {
-    beef: `<svg class="svg-icon" viewBox="0 0 24 24"><circle cx="12.5" cy="8.5" r="2.5"/><path d="M12.5 2a6.5 6.5 0 0 0-6.22 4.6c-1.1 3.13-.78 3.9-3.18 6.08A3 3 0 0 0 5 18c4 0 8.4-1.8 11.4-4.8 3.48-3.48 4.6-6.2 4.6-7.2a4 4 0 0 0-4-4c-1.5 0-3 .5-4.5 2Z"/><path d="m18.5 6 2.19 4.5a6.48 6.48 0 0 1 .31 2"/></svg>`,
+    beef: `<svg class="svg-icon" viewBox="0 0 24 24"><path d="M5 6c3-3 8-3 12-1 3 2 4 6 2 9-2 5-6 8-10 8-3 0-5-2-5-5 0-4 0-8 1-11z"/><line x1="11" y1="5" x2="11" y2="18"/><line x1="6" y1="10" x2="16" y2="10"/><circle cx="11" cy="10" r="1.5"/></svg>`,
     appetizer: `<svg class="svg-icon" viewBox="0 0 24 24"><path d="M3 18h18"/><path d="M4 18a8 8 0 0 1 16 0"/><circle cx="12" cy="7" r="1.5"/><line x1="2" y1="21" x2="22" y2="21"/></svg>`,
     burger: `<svg class="svg-icon" viewBox="0 0 24 24"><path d="M5 10a7 7 0 0 1 14 0H5Z"/><path d="M4 14h16"/><path d="M5 18h14a2 2 0 0 1 2 2H3a2 2 0 0 1 2-2Z"/><line x1="8" y1="6.5" x2="8.01" y2="6.5"/><line x1="12" y1="5.5" x2="12.01" y2="5.5"/><line x1="16" y1="6.5" x2="16.01" y2="6.5"/></svg>`,
-    ribs: `<svg class="svg-icon" viewBox="0 0 24 24"><path d="M3 10c0-1.1.9-2 2-2h14a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-2z"/><path d="M3 16c0-1.1.9-2 2-2h14a2 2 0 0 1 2 2v1a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-1z"/><circle cx="6" cy="4" r="1.5"/><circle cx="12" cy="4" r="1.5"/><circle cx="18" cy="4" r="1.5"/><line x1="6" y1="5.5" x2="6" y2="8"/><line x1="12" y1="5.5" x2="12.01" y2="8"/><line x1="18" y1="5.5" x2="18" y2="8"/></svg>`,
-    chicken: `<svg class="svg-icon" viewBox="0 0 24 24"><path d="m15.4 15.63 3.65-3.65a5.5 5.5 0 0 0-7.78-7.78l-3.65 3.65a5.5 5.5 0 0 0 7.78 7.78Z"/><path d="m8.5 13.5-3.5 3.5"/><circle cx="3.5" cy="18.5" r="1.5"/><circle cx="5.5" cy="20.5" r="1.5"/></svg>`,
+    ribs: `<svg class="svg-icon" viewBox="0 0 24 24"><rect x="3" y="9" width="18" height="5" rx="2.5"/><rect x="3" y="16" width="18" height="5" rx="2.5"/><line x1="7" y1="4" x2="7" y2="9"/><line x1="12" y1="4" x2="12" y2="9"/><line x1="17" y1="4" x2="17" y2="9"/><circle cx="7" cy="3.5" r="1.5"/><circle cx="12" cy="3.5" r="1.5"/><circle cx="17" cy="3.5" r="1.5"/></svg>`,
+    chicken: `<svg class="svg-icon" viewBox="0 0 24 24"><ellipse cx="8.5" cy="12" rx="5.5" ry="4.5"/><path d="M14 12h5"/><circle cx="19" cy="10" r="1.5"/><circle cx="19" cy="14" r="1.5"/><line x1="6.5" y1="10" x2="8.5" y2="14"/><line x1="9" y1="10" x2="11" y2="14"/></svg>`,
     soup: `<svg class="svg-icon" viewBox="0 0 24 24"><path d="M3 12h18a8 8 0 0 1-16 0z"/><path d="M7 20h10"/><path d="M7 8c0-2 1.5-3 1.5-5"/><path d="M12 8c0-2 1.5-3 1.5-5"/><path d="M17 8c0-2 1.5-3 1.5-5"/></svg>`,
-    salad: `<svg class="svg-icon" viewBox="0 0 24 24"><path d="M7 21h10a9 9 0 0 0 5-7.5H2A9 9 0 0 0 7 21Z"/><path d="M16 8.5c.5-1.5.5-3-.5-4.5-1.5 0-3 .5-4.5 2a8 8 0 0 0-4-1c-1.5 1.5-2 3.5-1.5 5"/><path d="M10 7.5c.5-1 1-1.5 2-1.5"/></svg>`,
+    salad: `<svg class="svg-icon" viewBox="0 0 24 24"><path d="M3 11c0 5 4 9 9 9s9-4 9-9H3z"/><path d="M6 11c0-3 2-6 6-6s6 3 6 6"/><path d="M12 5V2"/><path d="M9 7c1-2 3-3 3-3"/><path d="M15 7c-1-2-3-3-3-3"/><circle cx="8" cy="14" r="1.5"/><circle cx="16" cy="14" r="1.5"/></svg>`,
     sandwich: `<svg class="svg-icon" viewBox="0 0 24 24"><path d="m2.37 11.22 8.35-8.35a2 2 0 0 1 2.83 0l8.08 8.08a2 2 0 0 1 .57 1.41V18a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-5.37a2 2 0 0 1 .37-1.41Z"/><path d="M3 14h18"/><path d="m3 11 8-8"/></svg>`,
     plant: `<svg class="svg-icon" viewBox="0 0 24 24"><path d="M12 22v-9"/><path d="M12 13a6 6 0 0 1 6-6c0 4-2.5 6-6 6z"/><path d="M12 17a6 6 0 0 0-6-6c0 4 2.5 6 6 6z"/></svg>`,
     chef: `<svg class="svg-icon" viewBox="0 0 24 24"><path d="M6 13.87A4 4 0 0 1 7.41 6a5.11 5.11 0 0 1 1.05-1.54 5 5 0 0 1 7.08 0A5.11 5.11 0 0 1 16.59 6 4 4 0 0 1 18 13.87V21H6Z"/><line x1="6" y1="17" x2="18" y2="17"/></svg>`,
@@ -26,7 +26,7 @@
     beer: `<svg class="svg-icon" viewBox="0 0 24 24"><path d="M17 11h1a3 3 0 0 1 0 6h-1"/><path d="M9 12v6"/><path d="M13 12v6"/><path d="M14 7.5c-1 0-1.44.5-3 .5s-2-.5-3-.5-1.72.5-2.5.5a2.5 2.5 0 0 1 0-5c.78 0 1.57.5 2.5.5S9.44 3 11 3s2 .5 3 .5 1.72-.5 2.5-.5a2.5 2.5 0 0 1 0 5c-.78 0-1.5-.5-2.5-.5Z"/><path d="M5 8v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V8"/></svg>`,
     'cold-drink': `<svg class="svg-icon" viewBox="0 0 24 24"><path d="m6 8 1.75 12.28a2 2 0 0 0 2 1.72h4.5a2 2 0 0 0 2-1.72L18 8"/><path d="M5 8h14"/><path d="M7 14h10"/><path d="m15 2-2 6"/></svg>`,
     'hot-drink': `<svg class="svg-icon" viewBox="0 0 24 24"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>`,
-    all: `<svg class="svg-icon" viewBox="0 0 24 24"><rect width="7" height="7" x="3" y="3" rx="1"/><rect width="7" height="7" x="14" y="3" rx="1"/><rect width="7" height="7" x="14" y="14" rx="1"/><rect width="7" height="7" x="3" y="14" rx="1"/></svg>`,
+    all: `<svg class="svg-icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3.5"/></svg>`,
     close: `<svg class="svg-icon" viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>`
   };
 
@@ -587,9 +587,6 @@
   const dom = {
     categoryScroller: document.getElementById('category-scroller'),
     categoryDirectoryGrid: document.getElementById('category-directory-grid'),
-    activeFilterStrip: document.getElementById('active-filter-strip'),
-    activeFilterText: document.getElementById('active-filter-text'),
-    btnResetFilter: document.getElementById('btn-reset-filter'),
     menuCatalogContainer: document.getElementById('menu-catalog-container'),
     searchInput: document.getElementById('menu-search-input'),
     searchClear: document.getElementById('search-clear'),
@@ -862,14 +859,12 @@
       // Calcular dinámicamente la altura real de los elementos fijos/sticky
       const navH = document.querySelector('.main-header, .navbar')?.offsetHeight || 65;
       const catNavH = document.querySelector('.category-nav-wrapper')?.offsetHeight || 64;
-      const filterStrip = document.getElementById('active-filter-strip');
-      const filterH = (filterStrip && filterStrip.style.display !== 'none') ? (filterStrip.offsetHeight || 44) : 0;
 
       // Si es un bloque de categoría o elemento dentro del catálogo, dejar espacio generoso
       if (element.classList && (element.classList.contains('category-group-block') || (element.id && element.id.startsWith('cat-block-')) || element.id === 'menu-catalog-container')) {
-        headerOffset = navH + catNavH + filterH + 28; // ~190px - 210px
+        headerOffset = navH + catNavH + 28; // ~157px - 165px
       } else {
-        headerOffset = navH + 24; // ~88px
+        headerOffset = navH + 24; // ~89px
       }
     }
     const elementPosition = element.getBoundingClientRect().top;
@@ -885,7 +880,13 @@
   // 1. Renderizar Barra Sticky de Categorías con SVGs y Contadores (Sin Emojis)
   // ==========================================================================
   function renderCategoryPills() {
-    let pillsHTML = '';
+    const isAllActive = !state.activeCategory;
+    let pillsHTML = `
+      <button class="category-pill ${isAllActive ? 'active' : ''}" data-category="todos" role="tab" aria-selected="${isAllActive}">
+        <span class="pill-icon">${getIconSVG('all')}</span>
+        <span>${t('all_dishes_tab')}</span>
+      </button>
+    `;
 
     categories.forEach(cat => {
       const count = products.filter(p => p.categoryId === cat.id).length;
@@ -905,7 +906,11 @@
     dom.categoryScroller.querySelectorAll('.category-pill').forEach(btn => {
       btn.addEventListener('click', () => {
         const catId = btn.getAttribute('data-category');
-        toggleCategory(catId);
+        if (catId === 'todos') {
+          selectCategory(null);
+        } else {
+          toggleCategory(catId);
+        }
       });
     });
   }
@@ -1010,7 +1015,8 @@
     let activePillEl = null;
     if (dom.categoryScroller) {
       dom.categoryScroller.querySelectorAll('.category-pill').forEach(btn => {
-        const match = Boolean(state.activeCategory && btn.getAttribute('data-category') === state.activeCategory);
+        const catId = btn.getAttribute('data-category');
+        const match = catId === 'todos' ? !state.activeCategory : (Boolean(state.activeCategory) && catId === state.activeCategory);
         btn.classList.toggle('active', match);
         btn.setAttribute('aria-selected', match);
         if (match) activePillEl = btn;
@@ -1056,12 +1062,6 @@
         );
       });
 
-      dom.activeFilterStrip.style.display = 'flex';
-      dom.activeFilterText.textContent = `${t('filter_searching')} "${state.searchQuery}" · ${filtered.length} ${t('filter_dishes_found')}`;
-      if (dom.btnResetFilter) {
-        dom.btnResetFilter.textContent = t('filter_reset_btn');
-      }
-
       if (filtered.length === 0) {
         container.innerHTML = `
           <div style="text-align: center; padding: 60px 16px; color: var(--text-muted);">
@@ -1077,18 +1077,26 @@
       }
 
       container.innerHTML = `
+        <div class="search-results-bar" style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 24px; padding: 12px 18px; background: var(--bg-surface-elevated); border: 1px solid var(--border-color); border-radius: var(--radius-md);">
+          <span style="font-weight: 600; color: var(--text-primary); font-size: 0.95rem;">
+            ${t('filter_searching')} "${state.searchQuery}" · ${filtered.length} ${t('filter_dishes_found')}
+          </span>
+          <button id="btn-search-clear-inline" class="btn-secondary" style="padding: 4px 14px; font-size: 0.82rem;" type="button">
+            ${t('filter_reset_btn')}
+          </button>
+        </div>
         <div class="featured-grid">
           ${filtered.map(createProductCardHTML).join('')}
         </div>
       `;
+      const clearBtn = document.getElementById('btn-search-clear-inline');
+      if (clearBtn) clearBtn.addEventListener('click', resetAllFilters);
       bindProductCardEvents(container);
       return;
     }
 
     // Caso B: Menú NO desplegado por defecto (Pantalla de bienvenida interactiva)
     if (!state.activeCategory) {
-      dom.activeFilterStrip.style.display = 'none';
-
       container.innerHTML = `
         <div class="menu-empty-unfold-prompt" id="catalog-unfold-prompt">
           <div class="unfold-prompt-icon">
@@ -1137,12 +1145,6 @@
     const countWord = state.currentLang === 'en' 
       ? (catProducts.length === 1 ? 'option' : 'dishes') 
       : (state.currentLang === 'pt' ? (catProducts.length === 1 ? 'opção' : 'pratos') : (catProducts.length === 1 ? 'opción' : 'platos'));
-
-    dom.activeFilterStrip.style.display = 'flex';
-    dom.activeFilterText.textContent = `${t('filter_active_cat')}: ${curLabel} · ${catProducts.length} ${countWord}`;
-    if (dom.btnResetFilter) {
-      dom.btnResetFilter.textContent = t('filter_fold_btn');
-    }
 
     if (catProducts.length === 0) {
       container.innerHTML = `
@@ -1631,11 +1633,6 @@
       dom.searchClear.classList.remove('visible');
       renderCatalog();
     });
-
-    // Botón de restablecer filtro activo
-    if (dom.btnResetFilter) {
-      dom.btnResetFilter.addEventListener('click', resetAllFilters);
-    }
 
     // Modal de Plato
     dom.modalCloseBtn.addEventListener('click', closeDishModal);
