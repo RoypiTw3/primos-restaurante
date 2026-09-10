@@ -10,23 +10,24 @@
   // Referencias a datos globales
   const { restaurant, categories, products } = window.PRIMOS_DATA;
 
-  // Diccionario de Iconografía Vectorial SVG Artesanal (Sustituye 100% los emojis)
+  // Diccionario de Iconografía Vectorial SVG Artesanal (Sustituye 100% los emojis con símbolos gastronómicos auténticos)
   const SVG_ICONS = {
-    beef: `<svg class="svg-icon" viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 1 10 10v8a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-8A10 10 0 0 1 12 2z"/><path d="M2 12h20"/><path d="M12 2v10"/></svg>`,
-    appetizer: `<svg class="svg-icon" viewBox="0 0 24 24"><path d="M3 17h18a1 1 0 0 1 1 1v1H2v-1a1 1 0 0 1 1-1z"/><path d="M4 17a8 8 0 1 1 16 0"/><circle cx="12" cy="7" r="1.5"/></svg>`,
-    burger: `<svg class="svg-icon" viewBox="0 0 24 24"><path d="M4 11a8 8 0 0 1 16 0H4z"/><rect x="2" y="14" width="20" height="3" rx="1.5"/><path d="M4 20h16a2 2 0 0 0 2-2H2a2 2 0 0 0 2 2z"/></svg>`,
-    ribs: `<svg class="svg-icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8 12h8"/><path d="M12 8v8"/></svg>`,
-    chicken: `<svg class="svg-icon" viewBox="0 0 24 24"><path d="M18 10a6 6 0 0 0-12 0c0 4 3 8 6 10 3-2 6-6 6-10z"/><circle cx="12" cy="9" r="2"/></svg>`,
-    soup: `<svg class="svg-icon" viewBox="0 0 24 24"><path d="M3 11h18a8 8 0 0 1-8 8H11a8 8 0 0 1-8-8z"/><path d="M8 4c0 2-2 3-2 5M12 4c0 2-2 3-2 5M16 4c0 2-2 3-2 5"/></svg>`,
-    salad: `<svg class="svg-icon" viewBox="0 0 24 24"><path d="M12 21a9 9 0 0 1-9-9c0-5 4-9 9-9s9 4 9 9a9 9 0 0 1-9 9z"/><path d="M12 3v18"/><path d="M3 12h18"/></svg>`,
-    sandwich: `<svg class="svg-icon" viewBox="0 0 24 24"><polygon points="3 6 21 6 12 18 3 6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>`,
+    beef: `<svg class="svg-icon" viewBox="0 0 24 24"><circle cx="12.5" cy="8.5" r="2.5"/><path d="M12.5 2a6.5 6.5 0 0 0-6.22 4.6c-1.1 3.13-.78 3.9-3.18 6.08A3 3 0 0 0 5 18c4 0 8.4-1.8 11.4-4.8 3.48-3.48 4.6-6.2 4.6-7.2a4 4 0 0 0-4-4c-1.5 0-3 .5-4.5 2Z"/><path d="m18.5 6 2.19 4.5a6.48 6.48 0 0 1 .31 2"/></svg>`,
+    appetizer: `<svg class="svg-icon" viewBox="0 0 24 24"><path d="M3 18h18"/><path d="M4 18a8 8 0 0 1 16 0"/><circle cx="12" cy="7" r="1.5"/><line x1="2" y1="21" x2="22" y2="21"/></svg>`,
+    burger: `<svg class="svg-icon" viewBox="0 0 24 24"><path d="M5 10a7 7 0 0 1 14 0H5Z"/><path d="M4 14h16"/><path d="M5 18h14a2 2 0 0 1 2 2H3a2 2 0 0 1 2-2Z"/><line x1="8" y1="6.5" x2="8.01" y2="6.5"/><line x1="12" y1="5.5" x2="12.01" y2="5.5"/><line x1="16" y1="6.5" x2="16.01" y2="6.5"/></svg>`,
+    ribs: `<svg class="svg-icon" viewBox="0 0 24 24"><path d="M3 10c0-1.1.9-2 2-2h14a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-2z"/><path d="M3 16c0-1.1.9-2 2-2h14a2 2 0 0 1 2 2v1a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-1z"/><circle cx="6" cy="4" r="1.5"/><circle cx="12" cy="4" r="1.5"/><circle cx="18" cy="4" r="1.5"/><line x1="6" y1="5.5" x2="6" y2="8"/><line x1="12" y1="5.5" x2="12.01" y2="8"/><line x1="18" y1="5.5" x2="18" y2="8"/></svg>`,
+    chicken: `<svg class="svg-icon" viewBox="0 0 24 24"><path d="m15.4 15.63 3.65-3.65a5.5 5.5 0 0 0-7.78-7.78l-3.65 3.65a5.5 5.5 0 0 0 7.78 7.78Z"/><path d="m8.5 13.5-3.5 3.5"/><circle cx="3.5" cy="18.5" r="1.5"/><circle cx="5.5" cy="20.5" r="1.5"/></svg>`,
+    soup: `<svg class="svg-icon" viewBox="0 0 24 24"><path d="M3 12h18a8 8 0 0 1-16 0z"/><path d="M7 20h10"/><path d="M7 8c0-2 1.5-3 1.5-5"/><path d="M12 8c0-2 1.5-3 1.5-5"/><path d="M17 8c0-2 1.5-3 1.5-5"/></svg>`,
+    salad: `<svg class="svg-icon" viewBox="0 0 24 24"><path d="M7 21h10a9 9 0 0 0 5-7.5H2A9 9 0 0 0 7 21Z"/><path d="M16 8.5c.5-1.5.5-3-.5-4.5-1.5 0-3 .5-4.5 2a8 8 0 0 0-4-1c-1.5 1.5-2 3.5-1.5 5"/><path d="M10 7.5c.5-1 1-1.5 2-1.5"/></svg>`,
+    sandwich: `<svg class="svg-icon" viewBox="0 0 24 24"><path d="m2.37 11.22 8.35-8.35a2 2 0 0 1 2.83 0l8.08 8.08a2 2 0 0 1 .57 1.41V18a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-5.37a2 2 0 0 1 .37-1.41Z"/><path d="M3 14h18"/><path d="m3 11 8-8"/></svg>`,
     plant: `<svg class="svg-icon" viewBox="0 0 24 24"><path d="M12 22v-9"/><path d="M12 13a6 6 0 0 1 6-6c0 4-2.5 6-6 6z"/><path d="M12 17a6 6 0 0 0-6-6c0 4 2.5 6 6 6z"/></svg>`,
-    chef: `<svg class="svg-icon" viewBox="0 0 24 24"><path d="M6 18h12a2 2 0 0 1 2 2v1H4v-1a2 2 0 0 1 2-2z"/><path d="M6 18V9a4 4 0 0 1 4-4 4 4 0 0 1 8 0v9"/></svg>`,
-    dessert: `<svg class="svg-icon" viewBox="0 0 24 24"><path d="M4 14h16v6a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-6z"/><path d="M12 4v4"/><circle cx="12" cy="3" r="1.5"/></svg>`,
-    beer: `<svg class="svg-icon" viewBox="0 0 24 24"><path d="M5 2h10v16a3 3 0 0 1-3 3H8a3 3 0 0 1-3-3V2z"/><path d="M15 6h3a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-3"/></svg>`,
-    'cold-drink': `<svg class="svg-icon" viewBox="0 0 24 24"><path d="M7 2l1.5 18a2 2 0 0 0 2 2h3a2 2 0 0 0 2-2L17 2H7z"/><line x1="6" y1="6" x2="18" y2="6"/></svg>`,
+    chef: `<svg class="svg-icon" viewBox="0 0 24 24"><path d="M6 13.87A4 4 0 0 1 7.41 6a5.11 5.11 0 0 1 1.05-1.54 5 5 0 0 1 7.08 0A5.11 5.11 0 0 1 16.59 6 4 4 0 0 1 18 13.87V21H6Z"/><line x1="6" y1="17" x2="18" y2="17"/></svg>`,
+    dessert: `<svg class="svg-icon" viewBox="0 0 24 24"><circle cx="9" cy="7" r="2"/><path d="M7.2 7.9 3 11v9c0 .6.4 1 1 1h16c.6 0 1-.4 1-1v-9c0-2-3-6-7-8l-3.6 2.6"/><path d="M16 13H3"/><path d="M16 17H3"/></svg>`,
+    beer: `<svg class="svg-icon" viewBox="0 0 24 24"><path d="M17 11h1a3 3 0 0 1 0 6h-1"/><path d="M9 12v6"/><path d="M13 12v6"/><path d="M14 7.5c-1 0-1.44.5-3 .5s-2-.5-3-.5-1.72.5-2.5.5a2.5 2.5 0 0 1 0-5c.78 0 1.57.5 2.5.5S9.44 3 11 3s2 .5 3 .5 1.72-.5 2.5-.5a2.5 2.5 0 0 1 0 5c-.78 0-1.5-.5-2.5-.5Z"/><path d="M5 8v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V8"/></svg>`,
+    'cold-drink': `<svg class="svg-icon" viewBox="0 0 24 24"><path d="m6 8 1.75 12.28a2 2 0 0 0 2 1.72h4.5a2 2 0 0 0 2-1.72L18 8"/><path d="M5 8h14"/><path d="M7 14h10"/><path d="m15 2-2 6"/></svg>`,
     'hot-drink': `<svg class="svg-icon" viewBox="0 0 24 24"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>`,
-    all: `<svg class="svg-icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3"/></svg>`
+    all: `<svg class="svg-icon" viewBox="0 0 24 24"><rect width="7" height="7" x="3" y="3" rx="1"/><rect width="7" height="7" x="14" y="3" rx="1"/><rect width="7" height="7" x="14" y="14" rx="1"/><rect width="7" height="7" x="3" y="14" rx="1"/></svg>`,
+    close: `<svg class="svg-icon" viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>`
   };
 
   function getIconSVG(key) {
@@ -85,18 +86,25 @@
       card4_btn: "Pedir a Domicilio →",
       catalog_super: "CULTURA GASTRONÓMICA · SAN ANTONIO 1982",
       catalog_title: "Nuestra Carta Digital & Especialidades a la Brasa",
-      catalog_desc: "Explora nuestras 14 categorías. Personaliza tu término de cocción, selecciona tus guarniciones y realiza tu pedido directamente desde tu mesa.",
+      catalog_desc: "Elige una de nuestras 14 categorías para desplegar sus platos. Personaliza tu término de cocción, selecciona tus guarniciones y realiza tu pedido directamente desde tu mesa.",
       search_placeholder: "Buscar en la carta por plato, salsa o ingrediente (ej. Béarnaise, pimienta, angus, champiñones, limonada)...",
       all_dishes_tab: "Todos los platos",
       dir_badge: "DIRECTORIO OFICIAL",
       dir_title: "Explora Nuestras 14 Secciones Gastronómicas",
-      dir_hint: "Toca cualquier sección para ir directamente a sus platos",
+      dir_hint: "Toca cualquier sección para desplegar sus platos",
       dish_official_price: "Precio oficial",
       dish_customize_btn: "Personalizar +",
       filter_searching: "Buscando",
       filter_dishes_found: "plato(s) encontrado(s)",
       filter_active_cat: "Categoría activa",
       filter_reset_btn: "✕ Ver todos los platos (Restablecer)",
+      filter_fold_btn: "✕ Plegar sección",
+      catalog_select_prompt_title: "Elige una sección para desplegar sus platos",
+      catalog_select_prompt_desc: "Toca cualquiera de las 14 categorías para ver los cortes, recetas y precios oficiales de nuestra cocina a la brasa.",
+      catalog_select_prompt_hint: "Opciones insignes más pedidas en sala:",
+      catalog_unfolded_badge: "Sección Desplegada",
+      catalog_next_cat: "Siguiente",
+      catalog_prev_cat: "Anterior",
       booking_tag: "Atención en Sala",
       booking_title: "Reserva tu mesa en el corazón de San Antonio",
       booking_desc: "Disfruta de una velada tranquila bajo los árboles de nuestro patio colonial o en el salón principal rodeado de arte colombiano. Atendemos reservas para parejas, familias y eventos privados.",
@@ -219,18 +227,25 @@
       card4_btn: "Order Delivery →",
       catalog_super: "GASTRONOMIC CULTURE · SAN ANTONIO 1982",
       catalog_title: "Our Digital Menu & Charcoal Specialties",
-      catalog_desc: "Explore our 14 culinary categories. Customize meat doneness, select sides, and place your order directly from your table.",
+      catalog_desc: "Choose one of our 14 categories to unfold its dishes. Customize doneness, select sides, and place your order directly from your table.",
       search_placeholder: "Search menu by dish, sauce or ingredient (e.g. Béarnaise, pepper, angus, mushrooms, lemonade)...",
       all_dishes_tab: "All Dishes",
       dir_badge: "OFFICIAL DIRECTORY",
       dir_title: "Explore Our 14 Culinary Sections",
-      dir_hint: "Tap any section to jump directly to its dishes",
+      dir_hint: "Tap any section to unfold its dishes",
       dish_official_price: "Official price",
       dish_customize_btn: "Customize +",
       filter_searching: "Searching for",
       filter_dishes_found: "dish(es) found",
       filter_active_cat: "Active Category",
       filter_reset_btn: "✕ View all dishes (Reset)",
+      filter_fold_btn: "✕ Collapse section",
+      catalog_select_prompt_title: "Choose a section to unfold its dishes",
+      catalog_select_prompt_desc: "Tap any of the 14 categories above to view the cuts, recipes, and official prices of our charcoal grill.",
+      catalog_select_prompt_hint: "Most popular dining room cuts:",
+      catalog_unfolded_badge: "Section Unfolded",
+      catalog_next_cat: "Next",
+      catalog_prev_cat: "Previous",
       booking_tag: "Dine-in Service",
       booking_title: "Reserve your table in the heart of San Antonio",
       booking_desc: "Enjoy an authentic culinary journey under the colonial fern patio or in our art galleries with live weekend music.",
@@ -353,18 +368,25 @@
       card4_btn: "Pedir Delivery →",
       catalog_super: "CULTURA GASTRONÔMICA · SAN ANTONIO 1982",
       catalog_title: "Nosso Cardápio Digital & Especialidades na Brasa",
-      catalog_desc: "Explore nossas 14 categorias. Personalize o ponto da carne, selecione os acompanhamentos e faça seu pedido direto da mesa.",
+      catalog_desc: "Escolha uma de nossas 14 categorias para desdobrar seus pratos. Personalize o ponto da carne, selecione os acompanhamentos e faça seu pedido direto da mesa.",
       search_placeholder: "Buscar no cardápio por prato, molho ou ingrediente (ex. Béarnaise, pimenta, angus, cogumelos, limonada)...",
       all_dishes_tab: "Todos os pratos",
       dir_badge: "DIRETÓRIO OFICIAL",
       dir_title: "Explore Nossas 14 Seções Gastronômicas",
-      dir_hint: "Toque em qualquer seção para ir direto aos pratos",
+      dir_hint: "Toque em qualquer seção para desdobrar seus pratos",
       dish_official_price: "Preço oficial",
       dish_customize_btn: "Personalizar +",
       filter_searching: "Buscando por",
       filter_dishes_found: "prato(s) encontrado(s)",
       filter_active_cat: "Categoria ativa",
       filter_reset_btn: "✕ Ver todo o cardápio (Restaurar)",
+      filter_fold_btn: "✕ Recolher seção",
+      catalog_select_prompt_title: "Escolha uma seção para desdobrar seus pratos",
+      catalog_select_prompt_desc: "Toque em qualquer uma das 14 categorias para ver os cortes, receitas e preços oficiais de nossa grelha.",
+      catalog_select_prompt_hint: "Opções insignes mais pedidas no salão:",
+      catalog_unfolded_badge: "Seção Desdobrada",
+      catalog_next_cat: "Próxima",
+      catalog_prev_cat: "Anterior",
       booking_tag: "Atendimento no Salão",
       booking_title: "Reserve sua mesa no coração de San Antonio",
       booking_desc: "Viva uma experiência gastronômica sob o pátio das samambaias ou em nossas galerias de arte com música ao vivo nos fins de semana.",
@@ -540,7 +562,7 @@
   // Estado de la Aplicación
   const state = {
     currentLang: localStorage.getItem('primos_lang') || 'es',
-    activeCategory: 'todos',
+    activeCategory: null,
     searchQuery: '',
     tableNumber: 1,
     cart: [],
@@ -863,14 +885,7 @@
   // 1. Renderizar Barra Sticky de Categorías con SVGs y Contadores (Sin Emojis)
   // ==========================================================================
   function renderCategoryPills() {
-    const totalCount = products.length;
-    let pillsHTML = `
-      <button class="category-pill ${state.activeCategory === 'todos' ? 'active' : ''}" data-category="todos" role="tab" aria-selected="${state.activeCategory === 'todos'}">
-        <span class="pill-icon">${getIconSVG('all')}</span>
-        <span>${t('all_dishes_tab')}</span>
-        <span class="pill-count">(${totalCount})</span>
-      </button>
-    `;
+    let pillsHTML = '';
 
     categories.forEach(cat => {
       const count = products.filter(p => p.categoryId === cat.id).length;
@@ -890,14 +905,7 @@
     dom.categoryScroller.querySelectorAll('.category-pill').forEach(btn => {
       btn.addEventListener('click', () => {
         const catId = btn.getAttribute('data-category');
-        selectCategory(catId);
-        // Scroll suave al bloque del catálogo seleccionado
-        setTimeout(() => {
-          const target = catId === 'todos'
-            ? document.getElementById('seccion-menu')
-            : (document.getElementById(`cat-block-${catId}`) || document.getElementById('menu-catalog-container'));
-          if (target) smoothScrollTo(target);
-        }, 50);
+        toggleCategory(catId);
       });
     });
   }
@@ -959,23 +967,84 @@
     dom.categoryDirectoryGrid.querySelectorAll('.category-directory-btn').forEach(btn => {
       btn.addEventListener('click', () => {
         const catId = btn.getAttribute('data-category');
-        selectCategory(catId);
-        setTimeout(() => {
-          const target = document.getElementById(`cat-block-${catId}`) || document.getElementById('menu-catalog-container');
-          if (target) smoothScrollTo(target);
-        }, 50);
+        toggleCategory(catId);
       });
     });
   }
 
   // ==========================================================================
-  // 2. Renderizado del Catálogo Unificado (Sin Duplicaciones)
+  // 2. Control de Selección y Plegado del Menú On-Demand
+  // ==========================================================================
+  function toggleCategory(catId) {
+    if (state.activeCategory === catId) {
+      // Plegar / cerrar si ya estaba activa
+      selectCategory(null);
+    } else {
+      selectCategory(catId);
+    }
+  }
+
+  function selectCategory(catId) {
+    state.activeCategory = catId;
+    state.searchQuery = '';
+    if (dom.searchInput) {
+      dom.searchInput.value = '';
+      dom.searchClear.classList.remove('visible');
+    }
+
+    updateCategoryNavUI();
+    renderCatalog();
+
+    setTimeout(() => {
+      if (catId) {
+        const target = document.getElementById(`cat-block-${catId}`) || dom.menuCatalogContainer;
+        if (target) smoothScrollTo(target);
+      } else {
+        const dirEl = document.getElementById('category-directory-grid') || document.getElementById('seccion-menu');
+        if (dirEl) smoothScrollTo(dirEl);
+      }
+    }, 60);
+  }
+
+  function updateCategoryNavUI() {
+    let activePillEl = null;
+    if (dom.categoryScroller) {
+      dom.categoryScroller.querySelectorAll('.category-pill').forEach(btn => {
+        const match = Boolean(state.activeCategory && btn.getAttribute('data-category') === state.activeCategory);
+        btn.classList.toggle('active', match);
+        btn.setAttribute('aria-selected', match);
+        if (match) activePillEl = btn;
+      });
+    }
+
+    if (dom.categoryDirectoryGrid) {
+      dom.categoryDirectoryGrid.querySelectorAll('.category-directory-btn').forEach(btn => {
+        const match = Boolean(state.activeCategory && btn.getAttribute('data-category') === state.activeCategory);
+        btn.classList.toggle('active', match);
+      });
+    }
+
+    // Auto-centrar la pastilla seleccionada en el scroller horizontal para que nunca quede cortada
+    if (activePillEl) {
+      activePillEl.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+      if (window.updateScrollerArrows) {
+        setTimeout(window.updateScrollerArrows, 350);
+      }
+    }
+  }
+
+  function resetAllFilters() {
+    selectCategory(null);
+  }
+
+  // ==========================================================================
+  // 3. Renderizado del Catálogo (Despliegue On-Demand · Cero Sobrecarga Visual)
   // ==========================================================================
   function renderCatalog() {
     const container = dom.menuCatalogContainer;
     if (!container) return;
 
-    // Caso A: Búsqueda activa
+    // Caso A: Búsqueda activa en vivo
     if (state.searchQuery.trim() !== '') {
       const q = state.searchQuery.toLowerCase();
       const filtered = products.filter(p => {
@@ -989,6 +1058,9 @@
 
       dom.activeFilterStrip.style.display = 'flex';
       dom.activeFilterText.textContent = `${t('filter_searching')} "${state.searchQuery}" · ${filtered.length} ${t('filter_dishes_found')}`;
+      if (dom.btnResetFilter) {
+        dom.btnResetFilter.textContent = t('filter_reset_btn');
+      }
 
       if (filtered.length === 0) {
         container.innerHTML = `
@@ -1013,45 +1085,51 @@
       return;
     }
 
-    // Caso B: Todos los platos (Catálogo unificado organizado por categorías, sin duplicar Baby Beef)
-    if (state.activeCategory === 'todos') {
+    // Caso B: Menú NO desplegado por defecto (Pantalla de bienvenida interactiva)
+    if (!state.activeCategory) {
       dom.activeFilterStrip.style.display = 'none';
 
-      let catalogHTML = '';
-      categories.forEach(cat => {
-        const catProducts = products.filter(p => p.categoryId === cat.id);
-        if (catProducts.length === 0) return;
-        const label = getCategoryLabel(cat.id);
-        const subtitle = getCategorySubtitle(cat.id);
-        const countWord = state.currentLang === 'en' 
-          ? (catProducts.length === 1 ? 'option' : 'dishes') 
-          : (state.currentLang === 'pt' ? (catProducts.length === 1 ? 'opção' : 'pratos') : (catProducts.length === 1 ? 'opción' : 'platos'));
-
-        catalogHTML += `
-          <div class="category-group-block" id="cat-block-${cat.id}">
-            <div class="category-group-header">
-              <div class="category-group-left">
-                <div class="category-group-icon">${getIconSVG(cat.iconKey)}</div>
-                <div>
-                  <h3 class="category-group-title">${label}</h3>
-                  <div class="category-group-sub">${subtitle}</div>
-                </div>
-              </div>
-              <span class="category-group-count">${catProducts.length} ${countWord}</span>
-            </div>
-            <div class="featured-grid">
-              ${catProducts.map(createProductCardHTML).join('')}
+      container.innerHTML = `
+        <div class="menu-empty-unfold-prompt" id="catalog-unfold-prompt">
+          <div class="unfold-prompt-icon">
+            ${getIconSVG('appetizer')}
+          </div>
+          <h3 class="unfold-prompt-title">${t('catalog_select_prompt_title')}</h3>
+          <p class="unfold-prompt-desc">${t('catalog_select_prompt_desc')}</p>
+          <div class="unfold-prompt-popular">
+            <span class="unfold-popular-label">${t('catalog_select_prompt_hint')}</span>
+            <div class="unfold-popular-chips">
+              <button class="unfold-chip-btn" data-category="baby-beef" type="button">
+                ${getIconSVG('beef')}
+                <span>Baby Beef</span>
+              </button>
+              <button class="unfold-chip-btn" data-category="asados-pollo" type="button">
+                ${getIconSVG('chicken')}
+                <span>Asados de Pollo</span>
+              </button>
+              <button class="unfold-chip-btn" data-category="hamburguesas" type="button">
+                ${getIconSVG('burger')}
+                <span>Hamburguesas</span>
+              </button>
+              <button class="unfold-chip-btn" data-category="costillas" type="button">
+                ${getIconSVG('ribs')}
+                <span>Costillas</span>
+              </button>
             </div>
           </div>
-        `;
-      });
+        </div>
+      `;
 
-      container.innerHTML = catalogHTML;
-      bindProductCardEvents(container);
+      container.querySelectorAll('.unfold-chip-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const catId = btn.getAttribute('data-category');
+          selectCategory(catId);
+        });
+      });
       return;
     }
 
-    // Caso C: Categoría específica seleccionada
+    // Caso C: Categoría elegida y desplegada
     const curCat = categories.find(c => c.id === state.activeCategory);
     const catProducts = products.filter(p => p.categoryId === state.activeCategory);
     const curLabel = getCategoryLabel(state.activeCategory);
@@ -1062,38 +1140,79 @@
 
     dom.activeFilterStrip.style.display = 'flex';
     dom.activeFilterText.textContent = `${t('filter_active_cat')}: ${curLabel} · ${catProducts.length} ${countWord}`;
+    if (dom.btnResetFilter) {
+      dom.btnResetFilter.textContent = t('filter_fold_btn');
+    }
 
     if (catProducts.length === 0) {
       container.innerHTML = `
         <div style="text-align: center; padding: 60px 16px; color: var(--text-muted);">
           <p style="font-size: 1.15rem; margin-bottom: 12px;">${state.currentLang === 'en' ? 'No dishes currently registered in this section.' : (state.currentLang === 'pt' ? 'Nenhum prato cadastrado nesta seção temporariamente.' : 'No hay platos registrados en esta categoría temporalmente.')}</p>
-          <button id="btn-cat-empty-reset" class="btn-primary">${t('filter_reset_btn')}</button>
+          <button id="btn-cat-empty-reset" class="btn-primary">${t('filter_fold_btn')}</button>
         </div>
       `;
       const resetBtn = document.getElementById('btn-cat-empty-reset');
-      if (resetBtn) resetBtn.addEventListener('click', resetAllFilters);
+      if (resetBtn) resetBtn.addEventListener('click', () => selectCategory(null));
       return;
     }
 
+    const catIndex = categories.findIndex(c => c.id === state.activeCategory);
+    const prevCat = catIndex > 0 ? categories[catIndex - 1] : null;
+    const nextCat = catIndex < categories.length - 1 ? categories[catIndex + 1] : null;
+
     container.innerHTML = `
-      <div class="category-group-block" id="cat-block-${curCat ? curCat.id : 'selected'}">
+      <div class="category-group-block unfolded-active" id="cat-block-${curCat ? curCat.id : 'selected'}">
         <div class="category-group-header">
           <div class="category-group-left">
             <div class="category-group-icon">${getIconSVG(curCat ? curCat.iconKey : 'all')}</div>
             <div>
+              <div class="category-unfolded-badge">${t('catalog_unfolded_badge')}</div>
               <h3 class="category-group-title">${curLabel}</h3>
               <div class="category-group-sub">${curSub}</div>
             </div>
           </div>
-          <span class="category-group-count">${catProducts.length} ${countWord}</span>
+          <div class="category-group-actions">
+            <span class="category-group-count">${catProducts.length} ${countWord}</span>
+            <button class="btn-fold-category" data-action="fold" type="button" aria-label="${t('filter_fold_btn')}">
+              ${SVG_ICONS.close}
+              <span>${t('filter_fold_btn')}</span>
+            </button>
+          </div>
         </div>
         <div class="featured-grid">
           ${catProducts.map(createProductCardHTML).join('')}
+        </div>
+        <div class="category-bottom-nav">
+          ${prevCat ? `
+            <button class="cat-nav-btn prev-cat" data-category="${prevCat.id}" type="button">
+              ← ${getCategoryLabel(prevCat.id)}
+            </button>
+          ` : `<div></div>`}
+          <button class="cat-nav-btn fold-cat" data-action="fold" type="button">
+            ${t('filter_fold_btn')}
+          </button>
+          ${nextCat ? `
+            <button class="cat-nav-btn next-cat" data-category="${nextCat.id}" type="button">
+              ${getCategoryLabel(nextCat.id)} →
+            </button>
+          ` : `<div></div>`}
         </div>
       </div>
     `;
 
     bindProductCardEvents(container);
+
+    // Conectar botones de plegado y navegación entre categorías
+    container.querySelectorAll('[data-action="fold"]').forEach(btn => {
+      btn.addEventListener('click', () => selectCategory(null));
+    });
+
+    container.querySelectorAll('.cat-nav-btn[data-category]').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const nextId = btn.getAttribute('data-category');
+        selectCategory(nextId);
+      });
+    });
   }
 
   // Generador de Tarjeta de Producto (Fotografía gastronómica real y Cero Emojis)
@@ -1135,69 +1254,6 @@
     });
     // Aplicar spotlight listener a las tarjetas renderizadas
     setupSpotlightGlow();
-  }
-
-  function selectCategory(catId) {
-    state.activeCategory = catId;
-    state.searchQuery = '';
-    dom.searchInput.value = '';
-    dom.searchClear.classList.remove('visible');
-
-    let activePillEl = null;
-    dom.categoryScroller.querySelectorAll('.category-pill').forEach(btn => {
-      const match = btn.getAttribute('data-category') === catId;
-      btn.classList.toggle('active', match);
-      btn.setAttribute('aria-selected', match);
-      if (match) activePillEl = btn;
-    });
-
-    if (dom.categoryDirectoryGrid) {
-      dom.categoryDirectoryGrid.querySelectorAll('.category-directory-btn').forEach(btn => {
-        btn.classList.toggle('active', btn.getAttribute('data-category') === catId);
-      });
-    }
-
-    // Auto-centrar la pastilla seleccionada en el scroller horizontal para que NUNCA quede cortada en los bordes
-    if (activePillEl) {
-      activePillEl.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
-      if (window.updateScrollerArrows) {
-        setTimeout(window.updateScrollerArrows, 350);
-      }
-    }
-
-    renderCatalog();
-  }
-
-  function resetAllFilters() {
-    state.activeCategory = 'todos';
-    state.searchQuery = '';
-    dom.searchInput.value = '';
-    dom.searchClear.classList.remove('visible');
-
-    let firstPillEl = null;
-    dom.categoryScroller.querySelectorAll('.category-pill').forEach(btn => {
-      const match = btn.getAttribute('data-category') === 'todos';
-      btn.classList.toggle('active', match);
-      btn.setAttribute('aria-selected', match);
-      if (match) firstPillEl = btn;
-    });
-
-    if (firstPillEl) {
-      firstPillEl.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'start' });
-      if (window.updateScrollerArrows) {
-        setTimeout(window.updateScrollerArrows, 350);
-      }
-    }
-
-    if (dom.categoryDirectoryGrid) {
-      dom.categoryDirectoryGrid.querySelectorAll('.category-directory-btn').forEach(btn => {
-        btn.classList.remove('active');
-      });
-    }
-
-    renderCatalog();
-    const menuSec = document.getElementById('seccion-menu');
-    if (menuSec) smoothScrollTo(menuSec);
   }
 
   // ==========================================================================
