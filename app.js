@@ -12,10 +12,10 @@
 
   // Diccionario de Iconografía Vectorial SVG Artesanal (Sustituye 100% los emojis con símbolos gastronómicos auténticos)
   const SVG_ICONS = {
-    beef: `<svg class="svg-icon" viewBox="0 0 24 24"><path d="M5 6c3-3 8-3 12-1 3 2 4 6 2 9-2 5-6 8-10 8-3 0-5-2-5-5 0-4 0-8 1-11z"/><line x1="11" y1="5" x2="11" y2="18"/><line x1="6" y1="10" x2="16" y2="10"/><circle cx="11" cy="10" r="1.5"/></svg>`,
+    beef: `<svg class="svg-icon" viewBox="0 0 24 24"><path d="M3 4c2.5 3 4.5 4 6.5 4"/><path d="M21 4c-2.5 3-4.5 4-6.5 4"/><path d="M9 8h6l1.5 6-3 4h-3L7.5 14 9 8Z"/><path d="M6 10.5c-1.5 0-2.5 1-2 2s2 1.5 3 1"/><path d="M18 10.5c1.5 0 2.5 1 2 2s-2 1.5-3 1"/><circle cx="10" cy="15.5" r=".75"/><circle cx="14" cy="15.5" r=".75"/></svg>`,
     appetizer: `<svg class="svg-icon" viewBox="0 0 24 24"><path d="M3 18h18"/><path d="M4 18a8 8 0 0 1 16 0"/><circle cx="12" cy="7" r="1.5"/><line x1="2" y1="21" x2="22" y2="21"/></svg>`,
     burger: `<svg class="svg-icon" viewBox="0 0 24 24"><path d="M5 10a7 7 0 0 1 14 0H5Z"/><path d="M4 14h16"/><path d="M5 18h14a2 2 0 0 1 2 2H3a2 2 0 0 1 2-2Z"/><line x1="8" y1="6.5" x2="8.01" y2="6.5"/><line x1="12" y1="5.5" x2="12.01" y2="5.5"/><line x1="16" y1="6.5" x2="16.01" y2="6.5"/></svg>`,
-    ribs: `<svg class="svg-icon" viewBox="0 0 24 24"><rect x="3" y="9" width="18" height="5" rx="2.5"/><rect x="3" y="16" width="18" height="5" rx="2.5"/><line x1="7" y1="4" x2="7" y2="9"/><line x1="12" y1="4" x2="12" y2="9"/><line x1="17" y1="4" x2="17" y2="9"/><circle cx="7" cy="3.5" r="1.5"/><circle cx="12" cy="3.5" r="1.5"/><circle cx="17" cy="3.5" r="1.5"/></svg>`,
+    ribs: `<svg class="svg-icon" viewBox="0 0 24 24"><rect x="3" y="10" width="18" height="7" rx="3"/><line x1="7" y1="6" x2="7" y2="10"/><line x1="12" y1="5" x2="12" y2="10"/><line x1="17" y1="6" x2="17" y2="10"/></svg>`,
     chicken: `<svg class="svg-icon" viewBox="0 0 24 24"><ellipse cx="8.5" cy="12" rx="5.5" ry="4.5"/><path d="M14 12h5"/><circle cx="19" cy="10" r="1.5"/><circle cx="19" cy="14" r="1.5"/><line x1="6.5" y1="10" x2="8.5" y2="14"/><line x1="9" y1="10" x2="11" y2="14"/></svg>`,
     soup: `<svg class="svg-icon" viewBox="0 0 24 24"><path d="M3 12h18a8 8 0 0 1-16 0z"/><path d="M7 20h10"/><path d="M7 8c0-2 1.5-3 1.5-5"/><path d="M12 8c0-2 1.5-3 1.5-5"/><path d="M17 8c0-2 1.5-3 1.5-5"/></svg>`,
     salad: `<svg class="svg-icon" viewBox="0 0 24 24"><path d="M3 11c0 5 4 9 9 9s9-4 9-9H3z"/><path d="M6 11c0-3 2-6 6-6s6 3 6 6"/><path d="M12 5V2"/><path d="M9 7c1-2 3-3 3-3"/><path d="M15 7c-1-2-3-3-3-3"/><circle cx="8" cy="14" r="1.5"/><circle cx="16" cy="14" r="1.5"/></svg>`,
@@ -1104,36 +1104,8 @@
           </div>
           <h3 class="unfold-prompt-title">${t('catalog_select_prompt_title')}</h3>
           <p class="unfold-prompt-desc">${t('catalog_select_prompt_desc')}</p>
-          <div class="unfold-prompt-popular">
-            <span class="unfold-popular-label">${t('catalog_select_prompt_hint')}</span>
-            <div class="unfold-popular-chips">
-              <button class="unfold-chip-btn" data-category="baby-beef" type="button">
-                ${getIconSVG('beef')}
-                <span>Baby Beef</span>
-              </button>
-              <button class="unfold-chip-btn" data-category="asados-pollo" type="button">
-                ${getIconSVG('chicken')}
-                <span>Asados de Pollo</span>
-              </button>
-              <button class="unfold-chip-btn" data-category="hamburguesas" type="button">
-                ${getIconSVG('burger')}
-                <span>Hamburguesas</span>
-              </button>
-              <button class="unfold-chip-btn" data-category="costillas" type="button">
-                ${getIconSVG('ribs')}
-                <span>Costillas</span>
-              </button>
-            </div>
-          </div>
         </div>
       `;
-
-      container.querySelectorAll('.unfold-chip-btn').forEach(btn => {
-        btn.addEventListener('click', () => {
-          const catId = btn.getAttribute('data-category');
-          selectCategory(catId);
-        });
-      });
       return;
     }
 

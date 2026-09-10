@@ -3682,7 +3682,7 @@ dialog#data-modal::backdrop {
   font-size: 0.94rem;
   color: var(--text-muted);
   max-width: 540px;
-  margin: 0 auto 22px;
+  margin: 0 auto;
   line-height: 1.55;
 }
 
